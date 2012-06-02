@@ -12,6 +12,9 @@ LESS Framework
 5. Footer / footer
 
 -------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[1. html/body ]
+*/
 html,
 body {
   margin: 0;
@@ -22,13 +25,14 @@ body {
   font-size: 0.7692307692307692em;
   font-weight: 400;
   text-decoration: none;
-  background: #f2f2f2;
+  background: #f2f3e8;
 }
 ul {
   list-style-type: none;
   padding: 0;
 }
 ul li {
+  letter-spacing: 0.1em;
   display: inline;
 }
 a {
@@ -48,18 +52,33 @@ h5 {
   clear: both;
 }
 /*------------------------------------------------------------------
-[3. Layout & Background ]
+[2. Layout structure & Background ]
 */
 nav {
   width: 100%;
-  height: 30px;
+  height: auto;
   margin: 0 0;
   padding: 0 0;
   position: fixed;
   top: 0;
   z-index: 2;
-  padding: 0.5em 0;
-  background: #ffffff;
+  padding: 1.3em 0;
+  background: #f2f3e8;
+}
+nav ul {
+  clear: none;
+  float: right;
+  margin: 0 3em;
+}
+nav ul li {
+  font-size: 1em;
+  font-weight: 400;
+  text-decoration: none;
+  margin: 0 0.5em 0 0;
+}
+nav ul li a {
+  color: #35111e;
+  text-transform: uppercase;
 }
 #container {
   width: 100%;
@@ -68,20 +87,57 @@ nav {
   padding: 0 0;
 }
 /*------------------------------------------------------------------
-[4. Header ]
+[3. Header ]
 */
 header {
-  width: 965px;
+  width: 90%;
   height: auto;
-  margin: 0px auto;
-  padding: 0 0;
-  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 5%;
+  margin-top: 4em;
+  background: #fff;
+}
+header h1 {
+  width: 172px;
+  height: 171px;
+  display: block;
+  text-indent: -9999px;
+  font-size: 0;
+  border: 0;
+  line-height: 0;
+  background: transparent url('../images/logo.png') 0 0;
 }
 /*------------------------------------------------------------------
-[5. Inner Content ]
+[4. Inner Content ]
 */
+#main {
+  width: 90%;
+  height: 100%;
+  margin: 2em auto;
+  padding: 0 0;
+  max-width: 1400px;
+  border: 1px solid #525252;
+}
+#main section {
+  padding: 1em 1em;
+}
+#main section h2 {
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0.3em 0;
+  font-size: 3em;
+  font-weight: 100;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  background: #EAEDDD;
+}
+#projects {
+  background: #525252;
+}
 /*------------------------------------------------------------------
-[5. Footer ]
+[6. Footer ]
 */
 /* Variables
  * Variables to customize the look and feel of Bootstrap

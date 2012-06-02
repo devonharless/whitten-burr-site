@@ -104,6 +104,18 @@
   }
 }
 
+//Image replacement
+
+.image-replacement(@width, @height) {
+  width: @width;
+  height: @height;
+  display: block;
+  text-indent: -9999px;
+  font-size: 0;
+  border: 0;
+  line-height: 0;
+}
+
 // Font Stacks
 #font {
   .shorthand(@weight: normal, @size: 14px, @lineHeight: 20px) {

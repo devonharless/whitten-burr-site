@@ -15,6 +15,10 @@ LESS Framework
 
 -------------------------------------------------------------------*/
 
+/*------------------------------------------------------------------
+[1. html/body ]
+*/
+
 html, body {
   margin: 0;
   padding: 0;
@@ -23,7 +27,7 @@ html, body {
 body {
   .set_family("Helvetica Neue");
   .set_font(1em/1.3em, 400);
-  background: #f2f2f2;
+  background: #f2f3e8;
 }
 
 ul {
@@ -31,6 +35,7 @@ ul {
   padding: 0;
 
   li {
+    letter-spacing: 0.1em;
     display: inline;
   }
 }
@@ -58,21 +63,29 @@ h1, h2, h3, h4, h5 {
 
 
 /*------------------------------------------------------------------
-[3. Layout & Background ]
+[2. Layout structure & Background ]
 */
 
 
 nav {
-  .content_container(100%, 30px, 0, 0, 0, 0);
+  .content_container(100%, auto, 0, 0, 0, 0);
 	position: fixed;
   top: 0;
   z-index: 2;
-  padding: 0.5em 0;
-  background: @white;
+  padding: 1.3em 0;
+  background: #f2f3e8;
 
   ul {
-    //.set_float(none, right);
+    .set_float(none, right);
+    margin: 0 3em;
     li {
+      .set_font(1em, 400);
+      margin: 0 0.5em 0 0;
+
+      a {
+        color: #35111e;
+        text-transform: uppercase;
+      }
     }
   }
 }
@@ -82,22 +95,50 @@ nav {
 }
 
 /*------------------------------------------------------------------
-[4. Header ]
+[3. Header ]
 */
 
 header {
-  .content_container(965px, auto, 0px, auto, 0, 0);
-  max-width: 1024px;
+ .content_container(90%, auto, 0, auto, 0, 5%);
+ margin-top: 4em;
+ background: #fff;
+
+ h1 {
+  .image-replacement(172px, 171px);
+  background: transparent url('../images/logo.png') 0 0; 
+ }
 }
 
 
 /*------------------------------------------------------------------
-[5. Inner Content ]
+[4. Inner Content ]
 */
+
+#main {
+  .content_container(90%, 100%, 2em, auto, 0, 0);
+  max-width: 1400px;
+  border: 1px solid #525252;
+
+  section {
+    padding: 1em 1em;
+
+    h2 {
+      .content_container(200px, auto, 0, auto, 0.3em, 0);
+      .set_font(3em, 100);
+      text-align: center;
+      text-transform: uppercase;
+      background: #EAEDDD;
+    }
+  }
+}
+
+#projects {
+  background: #525252;
+}
 
 
 /*------------------------------------------------------------------
-[5. Footer ]
+[6. Footer ]
 */
 
 
