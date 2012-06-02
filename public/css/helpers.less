@@ -1,0 +1,184 @@
+/* Variables
+ * Variables to customize the look and feel of Bootstrap
+ * ----------------------------------------------------- */
+
+
+// Links
+@linkColor:         #0069d6;
+@linkColorHover:    darken(@linkColor, 15);
+
+// Grays
+@black:             #000;
+@grayDark:          lighten(@black, 25%);
+@gray:              lighten(@black, 40%);
+@grayLight:         lighten(@black, 50%);
+@grayLighter:       lighten(@black, 90%);
+@white:             #fff;
+
+// Accent Colors
+@blue:              #007d8c;
+@blueDark:          #0064CD;
+
+// Baseline grid
+@basefont:          13px;
+@baseline:          18px;
+
+// Griditude
+// Modify the grid styles in mixins.less
+@gridColumns:       16;
+@gridColumnWidth:   40px;
+@gridGutterWidth:   20px;
+@extraSpace:        (@gridGutterWidth * 2); // For our grid calculations
+@siteWidth:         (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+
+// Color Scheme
+// Use this to roll your own color schemes if you like (unused by Bootstrap by default)
+@baseColor:         @blue;                  // Set a base color
+@complement:        spin(@baseColor, 180);  // Determine a complementary color
+@split1:            spin(@baseColor, 158);  // Split complements
+@split2:            spin(@baseColor, -158);
+@triad1:            spin(@baseColor, 135);  // Triads colors
+@triad2:            spin(@baseColor, -135);
+@tetra1:            spin(@baseColor, 90);   // Tetra colors
+@tetra2:            spin(@baseColor, -90);
+@analog1:           spin(@baseColor, 22);   // Analogs colors
+@analog2:           spin(@baseColor, -22);
+
+
+/* Core - other brand specific values & colors */
+
+@light_grey: #d2d0d0;
+@dark_grey: #363844;
+@ebony: #131419;
+@pure_white: #fff;
+
+@active_base: #7356d2; 
+@secondary_base: #06b7cc;
+@delete: #d34d3b;
+@edit: #94d33b;
+
+
+
+/* Mixins
+ * Snippets of reusable CSS to develop faster and keep code readable
+ * ----------------------------------------------------------------- */
+
+
+// Clearfix for clearing floats like a boss h5bp.com/q
+.clearfix() {
+  zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    zoom: 1;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Center-align a block level element
+.center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Sizing shortcuts
+.size(@height: 5px, @width: 5px) {
+  height: @height;
+  width: @width;
+}
+.square(@size: 5px) {
+  .size(@size, @size);
+}
+
+// Input placeholder text
+.placeholder(@color: @grayLight) {
+  :-moz-placeholder {
+    color: @color;
+  }
+  ::-webkit-input-placeholder {
+    color: @color;
+  }
+}
+
+// Font Stacks
+#font {
+  .shorthand(@weight: normal, @size: 14px, @lineHeight: 20px) {
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineHeight;
+  }
+  .sans-serif(@weight: normal, @size: 14px, @lineHeight: 20px) {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineHeight;
+  }
+  .serif(@weight: normal, @size: 14px, @lineHeight: 20px) {
+    font-family: "Georgia", Times New Roman, Times, serif;
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineHeight;
+  }
+  .monospace(@weight: normal, @size: 12px, @lineHeight: 20px) {
+    font-family: "Monaco", Courier New, monospace;
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineHeight;
+  }
+}
+
+
+
+// Other helpers
+.set_font(@size, @weight: 500, @text_decoration: none) {
+  font-size: @size;
+  font-weight: @weight;
+  text-decoration: @text_decoration;
+}
+
+.set_family(@family) {
+  font-family: @family, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+}
+
+
+.content_container(@width: 100%, @height: 100%, @vertical_margin: 0px, @horizontal_margin: 0px, @vertical_padding: 0%, @horizontal_padding: 0%) {
+  width: @width;
+  height: @height;
+  margin: @vertical_margin @horizontal_margin;
+  padding: @vertical_padding @horizontal_padding;
+}
+
+.set_float(@set_clear, @float_type) {
+  clear: @set_clear;
+  float: @float_type;
+}
+
+.border_radius(@radius) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+
+.set_gradient(@start, @end) {
+  background-color: @start;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#444444), to(@end)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, @start, @end); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, @start, @end); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, @start, @end); /* IE10 */
+  background-image:      -o-linear-gradient(top, @start, @end); /* Opera 11.10+ */
+  background-image:         linear-gradient(top, @start, @end);
+}
+
+.set_gradient_with_second_image(@start, @end, @image) {
+  background-color: @start;
+  background-image: url("@{image}"), -webkit-gradient(linear, left top, left bottom, from(#444444), to(@end));
+  background-image: url("@{image}"), -webkit-linear-gradient(top, @start, @end);
+  background-image: url("@{image}"),    -moz-linear-gradient(top, @start, @end);
+  background-image: url("@{image}"),     -ms-linear-gradient(top, @start, @end);
+  background-image: url("@{image}"),      -o-linear-gradient(top, @start, @end);
+  background-image: url("@{image}"),         linear-gradient(top, @start, @end);
+}                                                              
