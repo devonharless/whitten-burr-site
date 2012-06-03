@@ -27,7 +27,7 @@ html, body {
 body {
   .set_family("Helvetica Neue");
   .set_font(1em/1.3em, 400);
-  background: #f2f3e8;
+  background: lighten(@cream, 7%);
 }
 
 ul {
@@ -36,7 +36,6 @@ ul {
 
   li {
     letter-spacing: 0.1em;
-    display: inline;
   }
 }
 
@@ -44,9 +43,11 @@ a {
   text-decoration: none;
 
   &:visited {
+    color: @linkColor;
   }
 
   &:hover {
+    color: @linkColorHover;
   }
 }
 
@@ -72,19 +73,33 @@ nav {
 	position: fixed;
   top: 0;
   z-index: 2;
-  padding: 1.3em 0;
-  background: #f2f3e8;
+  background: @white;
+  border-bottom: 1px solid @cream;
 
   ul {
     .set_float(none, right);
     margin: 0 3em;
+    //border: 1px solid @blue;
+
     li {
-      .set_font(1em, 400);
-      margin: 0 0.5em 0 0;
+      .set_float(none, left);
+      .set_font(1em, 500);
+      display: block;
 
       a {
-        color: #35111e;
+        color: @blue;
+        padding: 1.3em 1em;
+        display: block;
+        letter-spacing: 0.08em;
+        text-align: center;
         text-transform: uppercase;
+      }
+
+      a.active {
+        .set_gradient(lighten(@blue, 4%), darken(@blue, 10%));
+        color: @offWhite;
+        border-left: 1px solid darken(@blue, 15%);
+        border-right: 1px solid darken(@blue, 15%);
       }
     }
   }
@@ -99,9 +114,9 @@ nav {
 */
 
 header {
- .content_container(90%, auto, 0, auto, 0, 5%);
- margin-top: 4em;
- background: #fff;
+ .content_container(90%, auto, 5em, auto, 6em, 0);
+ margin-top: 3em;
+ max-width: 1400px;
 
  h1 {
   .image-replacement(172px, 171px);
@@ -117,23 +132,56 @@ header {
 #main {
   .content_container(90%, 100%, 2em, auto, 0, 0);
   max-width: 1400px;
-  border: 1px solid #525252;
+  //border: 1px solid #525252;
 
   section {
-    padding: 1em 1em;
+    .set_float(both, none);
+    margin: 4em 0;
+    padding: 2em;
+    //border-top: 1px solid @darkRed;
 
     h2 {
-      .content_container(200px, auto, 0, auto, 0.3em, 0);
+      .content_container(200px, auto, 0, 0, 0.3em, 0);
       .set_font(3em, 100);
+      margin-top: -1.2em;
       text-align: center;
       text-transform: uppercase;
-      background: #EAEDDD;
+      color: @offWhite;
+      background: @darkRed;
+    }
+  }
+}
+
+#about {
+  background: darken(@grayDark, 7%);
+  color: @offWhite;
+
+  blockquote {
+    .set_font(2.5em, 100);
+    text-align: center;
+  }
+
+  ul {
+    .content_container(100%, auto, 0, 0, 0, 0);
+    display: block;
+    //border: 1px solid blue;
+    
+    li {
+      .set_float(none, left);
+      //border: 1px solid green;
+      .content_container(28%, auto, 2em, 1.5em, 0, 0);
+      line-height: 1.8em;
+      display: block;
+
+      h3 {
+        .set_font(1.7em, 200);
+      }
     }
   }
 }
 
 #projects {
-  background: #525252;
+
 }
 
 

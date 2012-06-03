@@ -25,7 +25,7 @@ body {
   font-size: 0.7692307692307692em;
   font-weight: 400;
   text-decoration: none;
-  background: #f2f3e8;
+  background: #f8f9f4;
 }
 ul {
   list-style-type: none;
@@ -33,10 +33,15 @@ ul {
 }
 ul li {
   letter-spacing: 0.1em;
-  display: inline;
 }
 a {
   text-decoration: none;
+}
+a:visited {
+  color: #2f576a;
+}
+a:hover {
+  color: #182c35;
 }
 h1,
 h2,
@@ -62,8 +67,8 @@ nav {
   position: fixed;
   top: 0;
   z-index: 2;
-  padding: 1.3em 0;
-  background: #f2f3e8;
+  background: #ffffff;
+  border-bottom: 1px solid #eaeddd;
 }
 nav ul {
   clear: none;
@@ -71,14 +76,42 @@ nav ul {
   margin: 0 3em;
 }
 nav ul li {
+  clear: none;
+  float: left;
   font-size: 1em;
-  font-weight: 400;
+  font-weight: 500;
   text-decoration: none;
-  margin: 0 0.5em 0 0;
+  display: block;
 }
 nav ul li a {
-  color: #35111e;
+  color: #2f576a;
+  padding: 1.3em 1em;
+  display: block;
+  letter-spacing: 0.08em;
+  text-align: center;
   text-transform: uppercase;
+}
+nav ul li a.active {
+  background-color: #356378;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#444444), to(#1f3a47));
+  /* Saf4+, Chrome */
+
+  background-image: -webkit-linear-gradient(top, #356378, #1f3a47);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: -moz-linear-gradient(top, #356378, #1f3a47);
+  /* FF3.6 */
+
+  background-image: -ms-linear-gradient(top, #356378, #1f3a47);
+  /* IE10 */
+
+  background-image: -o-linear-gradient(top, #356378, #1f3a47);
+  /* Opera 11.10+ */
+
+  background-image: linear-gradient(top, #356378, #1f3a47);
+  color: #f2f3e8;
+  border-left: 1px solid #182c35;
+  border-right: 1px solid #182c35;
 }
 #container {
   width: 100%;
@@ -92,10 +125,10 @@ nav ul li a {
 header {
   width: 90%;
   height: auto;
-  margin: 0 auto;
-  padding: 0 5%;
-  margin-top: 4em;
-  background: #fff;
+  margin: 5em auto;
+  padding: 6em 0;
+  margin-top: 3em;
+  max-width: 1400px;
 }
 header h1 {
   width: 172px;
@@ -116,25 +149,58 @@ header h1 {
   margin: 2em auto;
   padding: 0 0;
   max-width: 1400px;
-  border: 1px solid #525252;
 }
 #main section {
-  padding: 1em 1em;
+  clear: both;
+  float: none;
+  margin: 4em 0;
+  padding: 2em;
 }
 #main section h2 {
   width: 200px;
   height: auto;
-  margin: 0 auto;
+  margin: 0 0;
   padding: 0.3em 0;
   font-size: 3em;
   font-weight: 100;
   text-decoration: none;
+  margin-top: -1.2em;
   text-align: center;
   text-transform: uppercase;
-  background: #EAEDDD;
+  color: #f2f3e8;
+  background: #4e3137;
 }
-#projects {
-  background: #525252;
+#about {
+  background: #323336;
+  color: #f2f3e8;
+}
+#about blockquote {
+  font-size: 2.5em;
+  font-weight: 100;
+  text-decoration: none;
+  text-align: center;
+}
+#about ul {
+  width: 100%;
+  height: auto;
+  margin: 0 0;
+  padding: 0 0;
+  display: block;
+}
+#about ul li {
+  clear: none;
+  float: left;
+  width: 28%;
+  height: auto;
+  margin: 2em 1.5em;
+  padding: 0 0;
+  line-height: 1.8em;
+  display: block;
+}
+#about ul li h3 {
+  font-size: 1.7em;
+  font-weight: 200;
+  text-decoration: none;
 }
 /*------------------------------------------------------------------
 [6. Footer ]
