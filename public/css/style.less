@@ -9,9 +9,8 @@ LESS Framework
 
 1. html/body
 2. Layout & Background / #container
-3. Header / header
-4. Inner Content / #main
-5. Footer / footer
+3. Inner Content / #main
+4. Footer / footer
 
 -------------------------------------------------------------------*/
 
@@ -79,7 +78,6 @@ nav {
   ul {
     .set_float(none, right);
     margin: 0 3em;
-    //border: 1px solid @blue;
 
     li {
       .set_float(none, left);
@@ -110,39 +108,25 @@ nav {
 }
 
 /*------------------------------------------------------------------
-[3. Header ]
-*/
-
-header {
- .content_container(90%, auto, 5em, auto, 6em, 0);
- margin-top: 3em;
- max-width: 1400px;
-
- h1 {
-  .image-replacement(172px, 171px);
-  background: transparent url('../images/logo.png') 0 0; 
- }
-}
-
-
-/*------------------------------------------------------------------
-[4. Inner Content ]
+[3. Inner Content ]
 */
 
 #main {
-  .content_container(90%, 100%, 2em, auto, 0, 0);
+  .content_container(100%, 100%, 2em, auto, 0, 0);
+  margin-bottom: 0;
   max-width: 1400px;
-  //border: 1px solid #525252;
 
   section {
     .set_float(both, none);
+
     margin: 4em 0;
     padding: 2em;
-    //border-top: 1px solid @darkRed;
+    //border: 1px solid blue;
 
     h2 {
       .content_container(200px, auto, 0, 0, 0.3em, 0);
       .set_font(3em, 100);
+      .box-shadow(1px 1px 5px 1px rgba(67, 0, 15, .1));
       margin-top: -1.2em;
       text-align: center;
       text-transform: uppercase;
@@ -156,42 +140,68 @@ header {
   background: darken(@grayDark, 7%);
   color: @offWhite;
 
+  h1 { display: none; }
+
   blockquote {
     .set_font(2.5em, 100);
-    text-align: center;
+    .set_background_size(125px);
+    min-height: 100px;
+    padding-left: 150px;
+    padding-top: 25px;
+    text-align: left;
+    letter-spacing: .1em;
+    text-decoration: none;
+    background: transparent url('../images/logo.png') no-repeat 0 top;
   }
 
   ul {
     .content_container(100%, auto, 0, 0, 0, 0);
     display: block;
-    //border: 1px solid blue;
-    
+
     li {
       .set_float(none, left);
-      //border: 1px solid green;
-      .content_container(28%, auto, 2em, 1.5em, 0, 0);
+      .content_container(26%, auto, 2em, 1.5em, 20px, 20px);
+      .border_radius(7px);
+      border: 1px solid rgba(0, 0, 0, .08);
+      background: @lightGray;
+      min-height: 175px;
       line-height: 1.8em;
+      -webkit-font-smoothing: antialiased;
       display: block;
 
       h3 {
         .set_font(1.7em, 200);
       }
+
+      p {
+        font-size: 1.05em;
+      }
     }
   }
 }
 
-#projects {
+#process{
+  margin-left: auto !important;
+  margin-right: auto !important;
+  
+  background-color: rgba(254, 255, 250, 1);
+  border: 1px solid rgba(255, 255, 255, 1);
+}
 
+#contact {
+  background: #323336;
+  border-bottom: 20px solid #181819;
+  margin-bottom: 0 !important;
 }
 
 
 /*------------------------------------------------------------------
-[6. Footer ]
+[4. Footer ]
 */
 
 
-footer {
-
+footer{
+  display: none;
 }
 
 

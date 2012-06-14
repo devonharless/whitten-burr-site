@@ -7,9 +7,8 @@ LESS Framework
 
 1. html/body
 2. Layout & Background / #container
-3. Header / header
-4. Inner Content / #main
-5. Footer / footer
+3. Inner Content / #main
+4. Footer / footer
 
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
@@ -120,34 +119,14 @@ nav ul li a.active {
   padding: 0 0;
 }
 /*------------------------------------------------------------------
-[3. Header ]
-*/
-header {
-  width: 90%;
-  height: auto;
-  margin: 5em auto;
-  padding: 6em 0;
-  margin-top: 3em;
-  max-width: 1400px;
-}
-header h1 {
-  width: 172px;
-  height: 171px;
-  display: block;
-  text-indent: -9999px;
-  font-size: 0;
-  border: 0;
-  line-height: 0;
-  background: transparent url('../images/logo.png') 0 0;
-}
-/*------------------------------------------------------------------
-[4. Inner Content ]
+[3. Inner Content ]
 */
 #main {
-  width: 90%;
+  width: 100%;
   height: 100%;
   margin: 2em auto;
   padding: 0 0;
+  margin-bottom: 0;
   max-width: 1400px;
 }
 #main section {
@@ -164,6 +143,9 @@ header h1 {
   font-size: 3em;
   font-weight: 100;
   text-decoration: none;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(67, 0, 15, 0.1);
+  -moz-box-shadow: 1px 1px 5px 1px rgba(67, 0, 15, 0.1);
+  box-shadow: 1px 1px 5px 1px rgba(67, 0, 15, 0.1);
   margin-top: -1.2em;
   text-align: center;
   text-transform: uppercase;
@@ -174,11 +156,24 @@ header h1 {
   background: #323336;
   color: #f2f3e8;
 }
+#about h1 {
+  display: none;
+}
 #about blockquote {
   font-size: 2.5em;
   font-weight: 100;
   text-decoration: none;
-  text-align: center;
+  background-size: 125px;
+  -webkit-background-size: 125px;
+  -moz-background-size: 125px;
+  -o-background-size: 125px;
+  min-height: 100px;
+  padding-left: 150px;
+  padding-top: 25px;
+  text-align: left;
+  letter-spacing: .1em;
+  text-decoration: none;
+  background: transparent url('../images/logo.png') no-repeat 0 top;
 }
 #about ul {
   width: 100%;
@@ -190,11 +185,18 @@ header h1 {
 #about ul li {
   clear: none;
   float: left;
-  width: 28%;
+  width: 26%;
   height: auto;
   margin: 2em 1.5em;
-  padding: 0 0;
+  padding: 20px 20px;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.2);
+  min-height: 175px;
   line-height: 1.8em;
+  -webkit-font-smoothing: antialiased;
   display: block;
 }
 #about ul li h3 {
@@ -202,9 +204,26 @@ header h1 {
   font-weight: 200;
   text-decoration: none;
 }
+#about ul li p {
+  font-size: 1.05em;
+}
+#process {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  background-color: #fefffa;
+  border: 1px solid #ffffff;
+}
+#contact {
+  background: #323336;
+  border-bottom: 20px solid #181819;
+  margin-bottom: 0 !important;
+}
 /*------------------------------------------------------------------
-[6. Footer ]
+[4. Footer ]
 */
+footer {
+  display: none;
+}
 /* Variables
  * Variables to customize the look and feel of Bootstrap
  * ----------------------------------------------------- */
