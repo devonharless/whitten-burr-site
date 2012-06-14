@@ -35,21 +35,23 @@ ul li {
 }
 a {
   text-decoration: none;
+  color: #339ea9;
 }
 a:visited {
-  color: #2f576a;
+  color: #25727a;
 }
 a:hover {
-  color: #182c35;
+  color: #40b9c5;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-weight: 200;
   margin: 0;
   padding: 0;
+  font-weight: 200;
+  letter-spacing: 0.09em;
 }
 .clear {
   float: none;
@@ -83,34 +85,37 @@ nav ul li {
   display: block;
 }
 nav ul li a {
-  color: #2f576a;
+  color: #315e72;
   padding: 1.3em 1em;
   display: block;
   letter-spacing: 0.08em;
   text-align: center;
   text-transform: uppercase;
 }
-nav ul li a.active {
-  background-color: #356378;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#444444), to(#1f3a47));
+nav ul li a:hover {
+  color: #407b96;
+}
+nav ul li .active {
+  background-color: #376a80;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#444444), to(#22414e));
   /* Saf4+, Chrome */
 
-  background-image: -webkit-linear-gradient(top, #356378, #1f3a47);
+  background-image: -webkit-linear-gradient(top, #376a80, #22414e);
   /* Chrome 10+, Saf5.1+, iOS 5+ */
 
-  background-image: -moz-linear-gradient(top, #356378, #1f3a47);
+  background-image: -moz-linear-gradient(top, #376a80, #22414e);
   /* FF3.6 */
 
-  background-image: -ms-linear-gradient(top, #356378, #1f3a47);
+  background-image: -ms-linear-gradient(top, #376a80, #22414e);
   /* IE10 */
 
-  background-image: -o-linear-gradient(top, #356378, #1f3a47);
+  background-image: -o-linear-gradient(top, #376a80, #22414e);
   /* Opera 11.10+ */
 
-  background-image: linear-gradient(top, #356378, #1f3a47);
+  background-image: linear-gradient(top, #376a80, #22414e);
   color: #f2f3e8;
-  border-left: 1px solid #182c35;
-  border-right: 1px solid #182c35;
+  border-left: 1px solid #1a323c;
+  border-right: 1px solid #1a323c;
 }
 #container {
   width: 100%;
@@ -124,37 +129,42 @@ nav ul li a.active {
 #main {
   width: 100%;
   height: 100%;
-  margin: 2em auto;
+  margin: 2em 0;
   padding: 0 0;
   margin-bottom: 0;
-  max-width: 1400px;
 }
 #main section {
+  width: 100%;
+  height: auto;
+  margin: 0 0;
+  padding: 0 0;
   clear: both;
   float: none;
-  margin: 4em 0;
-  padding: 2em;
 }
 #main section h2 {
   width: 200px;
   height: auto;
   margin: 0 0;
   padding: 0.3em 0;
-  font-size: 3em;
+  font-size: 2.8em;
   font-weight: 100;
   text-decoration: none;
   -webkit-box-shadow: 1px 1px 5px 1px rgba(67, 0, 15, 0.1);
   -moz-box-shadow: 1px 1px 5px 1px rgba(67, 0, 15, 0.1);
   box-shadow: 1px 1px 5px 1px rgba(67, 0, 15, 0.1);
-  margin-top: -1.2em;
   text-align: center;
   text-transform: uppercase;
   color: #f2f3e8;
-  background: #4e3137;
+  background: #2b5264;
+}
+#main .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4em;
 }
 #about {
-  background: #323336;
   color: #f2f3e8;
+  background: #8ea94a;
 }
 #about h1 {
   display: none;
@@ -167,6 +177,7 @@ nav ul li a.active {
   -webkit-background-size: 125px;
   -moz-background-size: 125px;
   -o-background-size: 125px;
+  text-shadow: 0 1px 1px rgba(255, 255, 0, 0.5);
   min-height: 100px;
   padding-left: 150px;
   padding-top: 25px;
@@ -208,10 +219,77 @@ nav ul li a.active {
   font-size: 1.05em;
 }
 #process {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  background-color: #fefffa;
-  border: 1px solid #ffffff;
+  background: #eaeddd;
+}
+#process h3 {
+  font-size: 1.7em;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 0 0.3em;
+  color: #434448;
+}
+#process h4 {
+  font-size: 1.25em;
+  font-weight: 300;
+  text-decoration: none;
+  margin-bottom: 1.5em;
+  color: #4aa991;
+  font-style: italic;
+}
+#process p {
+  font-size: 1.15em;
+  font-weight: 200;
+  text-decoration: none;
+  line-height: 1.6em;
+}
+#process .detail-slide {
+  width: 100%;
+  height: auto;
+  margin: 3em 0;
+  padding: 0 0;
+}
+#process .detail-slide.hidden {
+  display: none;
+}
+#process aside {
+  width: 32%;
+  height: auto;
+  margin: 0 0;
+  padding: 0 0;
+  clear: none;
+  float: left;
+}
+#process .showcase {
+  width: 60%;
+  height: auto;
+  margin: 0 0;
+  padding: 0 0;
+  clear: none;
+  float: right;
+}
+#process .showcase .media-container {
+  width: 100%;
+  height: 350px;
+  margin: 0 0;
+  padding: 0 0;
+}
+#process .showcase li {
+  width: 94%;
+  height: 95%;
+  margin: 3% auto;
+  padding: 0 0;
+  margin-bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  display: block;
+}
+#process .showcase li.hidden {
+  display: none;
+}
+#process .process-nav li {
+  font-size: 1.5em;
+  font-weight: 300;
+  text-decoration: none;
+  display: inline;
 }
 #contact {
   background: #323336;
@@ -227,7 +305,6 @@ footer {
 /* Variables
  * Variables to customize the look and feel of Bootstrap
  * ----------------------------------------------------- */
-/* Core - other brand specific values & colors */
 /* Mixins
  * Snippets of reusable CSS to develop faster and keep code readable
  * ----------------------------------------------------------------- */

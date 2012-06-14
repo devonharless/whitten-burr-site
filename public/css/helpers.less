@@ -4,8 +4,8 @@
 
 
 // Links
-@linkColor:         #2f576a;
-@linkColorHover:    darken(@linkColor, 15);
+@linkColor:         #25727A;
+@linkColorHover:    lighten(@linkColor, 20%);
 
 // Grays
 @black:             rgba(0, 0, 0, 1);
@@ -17,10 +17,13 @@
 // Accent Colors
 @offWhite:          #f2f3e8;
 @cream:             #eaeddd;
-@blue:              #2f576a;
-@blueDark:          #284d5b;
+@blue:              #315e72;
+@blueDark:          #294e5d;
 @darkRed:           #4e3137;
 @pinkRed:           #990033;
+@lightGreen:        #B4D6A3;
+@seaFoam:           lighten(#4AA991, 10%);
+@darkTeal:          #365857;
 
 // Baseline grid
 @basefont:          13px;
@@ -46,19 +49,6 @@
 @tetra2:            spin(@baseColor, -90);
 @analog1:           spin(@baseColor, 22);   // Analogs colors
 @analog2:           spin(@baseColor, -22);
-
-
-/* Core - other brand specific values & colors */
-
-@light_grey: #d2d0d0;
-@dark_grey: #363844;
-@ebony: #131419;
-@pure_white: #fff;
-
-@active_base: #7356d2; 
-@secondary_base: #06b7cc;
-@delete: #d34d3b;
-@edit: #94d33b;
 
 
 
@@ -158,7 +148,6 @@
 .set_family(@family) {
   font-family: @family, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
 }
-
 
 .content_container(@width: 100%, @height: 100%, @vertical_margin: 0px, @horizontal_margin: 0px, @vertical_padding: 0%, @horizontal_padding: 0%) {
   width: @width;
