@@ -24,7 +24,7 @@ body {
   font-size: 0.7692307692307692em;
   font-weight: 400;
   text-decoration: none;
-  background: #f8f9f4;
+  background: #ffffff;
 }
 ul {
   list-style-type: none;
@@ -69,7 +69,7 @@ nav {
   top: 0;
   z-index: 2;
   background: #ffffff;
-  border-bottom: 1px solid #eaeddd;
+  border-bottom: 1px solid #f4f6ee;
 }
 nav ul {
   clear: none;
@@ -178,6 +178,8 @@ nav ul li .active {
   -moz-background-size: 125px;
   -o-background-size: 125px;
   text-shadow: 0 1px 1px rgba(255, 255, 0, 0.5);
+  -moz-text-shadow: 0 1px 1px rgba(255, 255, 0, 0.5);
+  -webkit-text-shadow: 0 1px 1px rgba(255, 255, 0, 0.5);
   min-height: 100px;
   padding-left: 150px;
   padding-top: 25px;
@@ -188,38 +190,42 @@ nav ul li .active {
 }
 #about ul {
   width: 100%;
-  height: auto;
+  height: 250px;
   margin: 0 0;
   padding: 0 0;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 #about ul li {
-  clear: none;
-  float: left;
-  width: 26%;
+  width: 40%;
   height: auto;
-  margin: 2em 1.5em;
-  padding: 20px 20px;
+  margin: 10px 20px;
+  padding: 15px 20px;
   border-radius: 7px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   background: rgba(0, 0, 0, 0.2);
-  min-height: 175px;
+  min-height: 200px;
   line-height: 1.8em;
   -webkit-font-smoothing: antialiased;
-  display: block;
+  display: inline-block;
+  vertical-align: top;
 }
 #about ul li h3 {
   font-size: 1.7em;
   font-weight: 200;
   text-decoration: none;
+  text-align: left;
 }
 #about ul li p {
-  font-size: 1.05em;
+  font-size: 1.1em;
+  text-align: left;
 }
 #process {
-  background: #eaeddd;
+  background: #f4f6ee;
 }
 #process h3 {
   font-size: 1.7em;
@@ -233,11 +239,11 @@ nav ul li .active {
   font-weight: 300;
   text-decoration: none;
   margin-bottom: 1.5em;
-  color: #4aa991;
+  color: #8ea94a;
   font-style: italic;
 }
 #process p {
-  font-size: 1.15em;
+  font-size: 1em;
   font-weight: 200;
   text-decoration: none;
   line-height: 1.6em;
@@ -252,7 +258,7 @@ nav ul li .active {
   display: none;
 }
 #process aside {
-  width: 32%;
+  width: 31%;
   height: auto;
   margin: 0 0;
   padding: 0 0;
@@ -269,24 +275,32 @@ nav ul li .active {
 }
 #process .showcase .media-container {
   width: 100%;
-  height: 350px;
+  height: 400px;
   margin: 0 0;
   padding: 0 0;
+  background-color: #a6bd69;
+  background-image: url("../images/pattern2.png"), -webkit-gradient(linear, left top, left bottom, from(#444444), to(#bbcd8c));
+  background-image: url("../images/pattern2.png"), -webkit-linear-gradient(top, #a6bd69, #bbcd8c);
+  background-image: url("../images/pattern2.png"), -moz-linear-gradient(top, #a6bd69, #bbcd8c);
+  background-image: url("../images/pattern2.png"), -ms-linear-gradient(top, #a6bd69, #bbcd8c);
+  background-image: url("../images/pattern2.png"), -o-linear-gradient(top, #a6bd69, #bbcd8c);
+  background-image: url("../images/pattern2.png"), linear-gradient(top, #a6bd69, #bbcd8c);
+  border: 1px solid #e0e4cc;
 }
 #process .showcase li {
-  width: 94%;
-  height: 95%;
-  margin: 3% auto;
+  width: 96%;
+  height: 93%;
+  margin: 2% auto;
   padding: 0 0;
   margin-bottom: 0;
-  background: rgba(0, 0, 0, 0.2);
-  display: block;
+  background: #315e72;
+  z-index: 300;
 }
 #process .showcase li.hidden {
   display: none;
 }
-#process .process-nav li {
-  font-size: 1.5em;
+#process .process-nav {
+  font-size: 1.1em;
   font-weight: 300;
   text-decoration: none;
   display: inline;
@@ -295,6 +309,37 @@ nav ul li .active {
   background: #323336;
   border-bottom: 20px solid #181819;
   margin-bottom: 0 !important;
+}
+#contact ul#threeSections {
+  width: 100%;
+  height: 250px;
+  margin: 0 0;
+  padding: 0 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #f4f6ee;
+}
+#contact ul#threeSections li.aThird {
+  width: 28%;
+  height: auto;
+  margin: 10px 10px;
+  padding: 0px 15px;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.2);
+  min-height: 200px;
+  line-height: 1.8em;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  vertical-align: top;
+}
+#contact ul#threeSections li.aThird p {
+  font-size: 1.1em;
+  text-align: left;
 }
 /*------------------------------------------------------------------
 [4. Footer ]
