@@ -234,19 +234,41 @@ nav {
     .set_float(none, right);
 
     .media-container {
-      .content_container(100%, 400px, 0, 0, 0, 0);
-      .set_gradient_with_second_image(spin(@seaFoam, -88), lighten(spin(@seaFoam, -88), 10%), '../images/pattern2.png');
+      .content_container(100%, 380px, 0, 0, 2%, 0);  
       border: 1px solid darken(@cream, 10%);
     }
 
     li {
-      .content_container(96%, 93%, 2%, auto, 0, 0);
+      .content_container(96%, 100%, 0, auto, 0, 0);
+      //.image-replacement(96%, 100%);
+      //margin: 0 auto;
       margin-bottom: 0;
-      background: @blue;
-      z-index: 300;
-    
-      &.hidden {
-        display: none;
+      cursor: pointer;
+      background: darken(@cream, 10%);
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    .place_indicator {
+      .content_container(52px, auto, 0, auto, 0, 0);
+      li {
+        margin-right: 2px;
+        .image-replacement(10px, 10px);
+        .border_radius(10px);
+        background: darken(@lightGray, 20%);
+        border: 1px solid darken(@lightGray, 30%);
+        cursor: pointer;
+        display: inline-block;
+
+        &.active {
+          background: @seaFoam;
+        }
+        &:hover {
+          background: @seaFoam;
+        }
       }
     }
   }

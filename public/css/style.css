@@ -275,29 +275,52 @@ nav ul li .active {
 }
 #process .showcase .media-container {
   width: 100%;
-  height: 400px;
+  height: 380px;
   margin: 0 0;
-  padding: 0 0;
-  background-color: #a6bd69;
-  background-image: url("../images/pattern2.png"), -webkit-gradient(linear, left top, left bottom, from(#444444), to(#bbcd8c));
-  background-image: url("../images/pattern2.png"), -webkit-linear-gradient(top, #a6bd69, #bbcd8c);
-  background-image: url("../images/pattern2.png"), -moz-linear-gradient(top, #a6bd69, #bbcd8c);
-  background-image: url("../images/pattern2.png"), -ms-linear-gradient(top, #a6bd69, #bbcd8c);
-  background-image: url("../images/pattern2.png"), -o-linear-gradient(top, #a6bd69, #bbcd8c);
-  background-image: url("../images/pattern2.png"), linear-gradient(top, #a6bd69, #bbcd8c);
+  padding: 2% 0;
   border: 1px solid #e0e4cc;
 }
 #process .showcase li {
   width: 96%;
-  height: 93%;
-  margin: 2% auto;
+  height: 100%;
+  margin: 0 auto;
   padding: 0 0;
   margin-bottom: 0;
-  background: #315e72;
-  z-index: 300;
-}
-#process .showcase li.hidden {
+  cursor: pointer;
+  background: #e0e4cc;
   display: none;
+}
+#process .showcase li.active {
+  display: block;
+}
+#process .showcase .place_indicator {
+  width: 52px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+}
+#process .showcase .place_indicator li {
+  margin-right: 2px;
+  width: 10px;
+  height: 10px;
+  display: block;
+  text-indent: -9999px;
+  font-size: 0;
+  border: 0;
+  line-height: 0;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: inline-block;
+}
+#process .showcase .place_indicator li.active {
+  background: #69bda8;
+}
+#process .showcase .place_indicator li:hover {
+  background: #69bda8;
 }
 #process .process-nav {
   font-size: 1.1em;
