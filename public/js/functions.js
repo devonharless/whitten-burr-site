@@ -1,20 +1,61 @@
 $(document).ready(function() {
 
-  //Interactions
-  $('#first_showcase .media-container li').live('click', showNextImage);
-  $('#first_showcase .place_indicator li').bind('click', triggerNextImage);
-  var elements           = $('#first_showcase .media-container li');
-  var indicator_elements = $('#first_showcase .place_indicator li');
-  
-  var currentImage = $(elements[0]);
-  var lastImage    = $(elements[2]);
+  //Global vars
+  var _currentImage;
+  var _currentCircle;
+  var _lastImage;
+  var _elements           = $('.detail-slide.active .media-container li');
+  var _indicator_elements = $('.detail-slide.active .place_indicator li');
 
-  //Indicator
-  var currentCircle = $(indicator_elements[0]);
+  
+  //Process Slide Controller
+  processSlide();
+  processPage();
+
+  function processSlide() {
+    $('.media-container li').live('click', showNextImage);
+    //$('#first_showcase .place_indicator li').bind('click', triggerNextImage);
+  }
+
+  function processPage() {
+    $('#first-process').live('click', showNextProcess);
+    $('#second-process').live('click', showPreviousProcess);
+  }   
+
+  function showNextProcess(e) {
+    
+    event.preventDefault();
+    _currentProcess = $('#first_showcase').parent();
+    _nextProcess    = $('#second_showcase').parent();
+    $(_currentProcess[0]).fadeOut('slow', function() {
+      // Animation complete.
+      $(_nextProcess[0]).fadeIn();
+      $(_nextProcess[0]).addClass('active');
+      $(_currentProcess[0]).removeClass('active');
+    });
+    _elements = $('#second_showcase .media-container li');
+    _indicator_elements = $('#second_showcase .place_indicator li');
+  }
+
+  function showPreviousProcess(e) {
+    
+    event.preventDefault();
+    _currentProcess = $('#second_showcase').parent();
+    _nextProcess    = $('#first_showcase').parent();
+    $(_currentProcess[0]).fadeOut('slow', function() {
+      // Animation complete.
+      $(_nextProcess[0]).fadeIn();
+      $(_nextProcess[0]).addClass('active');
+      $(_currentProcess[0]).removeClass('active');
+    });
+    
+    _elements = $('#first_showcase .media-container li');
+    _indicator_elements = $('#first_showcase .place_indicator li');
+  }
 
   function triggerNextImage(e) {
     event.preventDefault();
-    //console.log(e.target)
+    
     var bleh = $(e.target).attr('class')
     //var test = $('#first_showcase .media-container', bleh);
     console.log(bleh)
@@ -31,28 +72,28 @@ $(document).ready(function() {
   function showNextImage(e) {
     e.preventDefault();
 
-    currentImage = e.target;
-    currentCircle = $(currentImage).parent().siblings().find('.active')
-    console.log('yeah >>', currentImage)
-
-    if($(currentImage).hasClass('active')) {
+    _lastImage     = $(_elements[2]);
+    _currentImage = e.target;
+    _currentCircle = $(_currentImage).parent().siblings().find('.active')
+   
+    if($(_currentImage).hasClass('active')) {
     
-      if(currentImage != lastImage[0]) {
+      if(_currentImage != _lastImage[0]) {
         $(this).removeClass('active');
         $(this).next().addClass('active');
 
-        $(currentCircle[0]).removeClass('active');
-        $(currentCircle[0]).next().addClass('active');
+        $(_currentCircle[0]).removeClass('active');
+        $(_currentCircle[0]).next().addClass('active');
       
       }
       else {
-        $(currentImage).removeClass();
-        $(currentCircle[0]).removeClass();
+        $(_currentImage).removeClass();
+        $(_currentCircle[0]).removeClass();
 
-        var currentImage = $(elements[0]);
-        var currentCircle = $(indicator_elements[0])
-        $(currentImage).addClass('active');
-        $(currentCircle).addClass('active');
+        _currentImage = $(_elements[0]);
+        _currentCircle = $(_indicator_elements[0])
+        $(_currentImage).addClass('active');
+        $(_currentCircle).addClass('active');
       }
     }
   }

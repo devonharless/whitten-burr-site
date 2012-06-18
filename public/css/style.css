@@ -253,9 +253,10 @@ nav ul li .active {
   height: auto;
   margin: 3em 0;
   padding: 0 0;
-}
-#process .detail-slide.hidden {
   display: none;
+}
+#process .detail-slide.active {
+  display: block;
 }
 #process aside {
   width: 31%;
