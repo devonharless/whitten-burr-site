@@ -48,7 +48,7 @@ $(document).ready(function() {
       $(_nextProcess[0]).addClass('active');
       $(_currentProcess[0]).removeClass('active');
     });
-    
+
     _elements = $('#first_showcase .media-container li');
     _indicator_elements = $('#first_showcase .place_indicator li');
   }
@@ -87,8 +87,8 @@ $(document).ready(function() {
       
       }
       else {
-        $(_currentImage).removeClass();
-        $(_currentCircle[0]).removeClass();
+        $(_currentImage).removeClass('active');
+        $(_currentCircle[0]).removeClass('active');
 
         _currentImage = $(_elements[0]);
         _currentCircle = $(_indicator_elements[0])

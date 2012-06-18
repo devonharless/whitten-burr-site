@@ -174,11 +174,11 @@
   box-shadow: @shadow;
 }
 
-.set_background_size(@size) {
-  background-size: @size;
-  -webkit-background-size: @size;
-  -moz-background-size: @size;
-  -o-background-size: @size;    
+.set_background_size(@width_size, @height_size) {
+  background-size: @width_size @height_size;
+  -webkit-background-size: @width_size @height_size;
+  -moz-background-size: @width_size @height_size;
+  -o-background-size: @width_size @height_size;    
 }
 
 .set_gradient(@start, @end) {
