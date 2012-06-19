@@ -20,17 +20,31 @@
   <script src="public/js/libs/less-1.1.3.min.js" ></script>
   <script src="public/js/libs/modernizr.js"></script>
   <script src="public/js/functions.js"></script>
+
+  <!-- google analytics -->
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32736602-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script>
   
 </head>
-<body>
+<body id="top">
   <div id="container">
   
     <nav>
       <ul>
-        <li id="nav-about"><a href="#about">About</a>
         <li id="nav-process"><a href="#process">Process</a>
         <li id="nav-contact"><a href="#contact">Contact</a>
-        <li id="nav-top"><a class="active" href="#">Top</a>
+        <li id="nav-top"><a class="active" href="#top">Top</a>
       </ul>
     </nav>
 
@@ -41,17 +55,12 @@
         <div class="content">
           <h1>Whitten &amp; Burr</h1>
 
-          <blockquote>At Whitten &amp; Burr, we focus on the best interactive experience that your visitors can have.</blockquote>
+          <blockquote>We are an interactive design agency. We are passionate about connections. We make memorable experiences.</blockquote>
 
           <ul>
             <li>
               <h3>Our Passion</h3>
-              <p>
-	      Compose
-	      
-	      We care about a seamless interactive experience that is accessible from the desktop or your mobile browser.
-	      
-	      We care about the accessiblity of your information and website. We revel in the details. We love to ask, <em>"Why?"</em> And we enjoy a good challenge.</p>
+              <p>We care about a seamless interactive experience that is accessible from the desktop or your mobile browser. We care about the accessiblity of your information and website. We revel in the details. We love to ask, <em>"Why?"</em> And we enjoy a good challenge.</p>
             </li>
 
             <li>
@@ -77,21 +86,20 @@
 
                   <h4>Research, Asking Questions, Market Validation</h4>
 
-                  <p>Our process is an iterative one. When we start a project, first we learn about your web needs so that we can create a strategy to fulfill those needs. In the next stage, we iterate with working prototypes as we design, develop, and fine-tune your site.</p>
-
+                  <p>Our process is an iterative one. When we start a project, we like to learn about your needs. During our research phase, we create web personas, compose user flows, and a strategy describing the project's interactive experience. In the next stage, we iterate with working prototypes as we design, develop, and fine-tune your project.</p>
                   <a id="first-process" class="process-nav" href="#">Next process: Design &amp; Development ></a>
                 </aside>
 
                 <div id="first_showcase" class="showcase">
                   <ul class="media-container">
-                    <li class="active first">image1</li>
-                    <li class="second">image2</li>
-                    <li class="third">image3</li>
+                    <li class="active first">User research and personas</li>
+                    <li class="second">Define workflows</li>
+                    <li class="third">Sketch and formulate ideas</li>
                   </ul><!--end .media-container-->
                   <ul class="place_indicator">
-                    <li class="active first">CIRCimage1</li>
-                    <li class="second">CIRCimage2</li>
-                    <li class="third">CIRCimage3</li>
+                    <li class="active first">User research and personas</li>
+                    <li class="second">Define workflows</li>
+                    <li class="third">Sketch and formulate ideas</li>
                   </ul> <!--end .place_indicator-->
                 </div> <!--end .showcase -->
 
@@ -104,21 +112,21 @@
 
                   <h4>UX, Prototyping, Engineering, Launch</h4>
 
-                  <p>More details go here I suppose.</p>
+                  <p>Throughout Design &amp; Development, we work closely with you as we create wireframes, visual design comps, working prototypes, and all the way through to launch. We work in an agile environment where we can swiftly create the best interactive experience for your project.</p>
 
                   <a id="second-process" class="process-nav" href="#">< Back to Discovery &amp; Ideation</a>
                 </aside>
 
                 <div id="second_showcase" class="showcase">
                   <ul class="media-container">
-                    <li class="active first">IMAGE1</li>
-                    <li class="second">IMAGE2</li>
-                    <li class="third">IMAGE3</li>
+                    <li class="active first">Wireframing</li>
+                    <li class="second">Design prototyping</li>
+                    <li class="third">Development and launch</li>
                   </ul><!--end .media-container-->
                   <ul class="place_indicator">
-                    <li class="active first">CIRCimage1</li>
-                    <li class="second">CIRCimage2</li>
-                    <li class="third">CIRCimage3</li>
+                    <li class="active first">Wireframing</li>
+                    <li class="second">Design prototyping</li>
+                    <li class="third">Development and launch</li>
                   </ul> <!--end .place_indicator-->
                 </div> <!--end .showcase -->
                 <div class="clear"></div>
@@ -132,27 +140,31 @@
       <section id="contact">
 
         <div class="content">
-        	<h2>Contact</h2>
+          <h2>Contact</h2>
 
-          <ul id="threeSections">
+          <ul id="columns">
             <li class="aThird">
-            	<p>Interested in working together? Don't hesitate to contact us.<br>Tel: 503.776.8595 or <a href="mailto:info@whittenburr.com">Email Us</a></p>
+              <p>Interested in working together? Don't hesitate to contact us.<br>Tel: 503.776.8595 or <a href="mailto:info@whittenburr.com">Email Us</a></p>
 
-            	<ul>
-            	<li><a href="#" id="twitter">twitter</a></li>
+              <ul id="social">
+              <li><a href="#" id="twitter">twitter</a></li>
                 <li><a href="#" id="facebook">facebook</a></li>
                 <li><a href="#" id="linkedin">linkedin</a></li>
-                <li><a href="#" id="dribbble">dribbble</a></li>
+                <!-- <li><a href="#" id="dribbble">dribbble</a></li> -->
                 <li><a href="#" id="googlePlus">google+</a></li>
-            	</ul>
+              </ul>
             </li> <!--first third-->
 
-            <li class="aThird">This is some twitter junks</li><!--second third-->
+            <li class="aThird">
+              <!-- twitter feed -->
+              <ul id="twitter_update_list"><li>Our tweets are loading...</li></ul>
+            </li><!--second third-->
             
-	    <li class="aThird">
-	      <p>Whitten & Burr was founded by Devon St. Clair and Domanique Alicia in 2012. We enjoy all things on the web, technology in general, and forest hikes. Our office is located in Northwest Portland, and usually is accessorized by a corgi named Ada.</p>
-	    </li><!--third third-->
-	    
+            <li class="aThird">
+              <p>Whitten &amp; Burr was founded by Devon St.Clair and Domanique Alicia in 2012. We enjoy all things on the web, technology in general, and forest hikes. Our office is located in NW Portland, and usually is accessorized by a corgi named Ada.</p>
+            </li><!--third third-->
+
+            <div class="clear"></div>
           </ul>
         </div>
       </section> <!--end #contact-->
@@ -163,5 +175,8 @@
     </footer>
 
   </div> <!--! end of #container -->
+
+  <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+  <script type="text/javascript" src="http://twitter.com/statuses/user_timeline/whittenandburr.json?callback=twitterCallback2&count=2"></script>
 </body>
 </html>
