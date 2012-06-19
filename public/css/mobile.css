@@ -1,0 +1,189 @@
+@media all and (max-width: 550px){
+
+    * { margin: 0; padding: 0; }
+
+    #container{
+	width: 100%;
+	overflow: hidden;
+        }
+    
+    nav { }
+    
+	nav ul{
+	    float: none !important;
+	    margin: 0 !important;
+	    width: 100%;
+	    text-align: center;
+	    }
+	    
+	    nav ul li{
+		display: inline-block !important;
+		float: none !important;
+		}
+	    
+	    nav ul li a{
+		padding: .9em 1em !important;
+		}
+
+	#nav-top, #nav-top a.active { display: none; }
+
+    #main { background-color: #F4F6EE; }
+    
+    #main #about { }
+    
+	#main #about .content {
+	    width: 90% !important;
+	    max-width: 90%;
+	    padding: 30px 0 0 0;
+	    }
+	    
+	    #main #about .content blockquote{
+		padding: 115px 0 0 0;
+		background-position: center top;
+		font-size: 1.9em;
+		text-align: center;
+		margin: 0 auto;
+		width: 100%;
+		    
+		-webkit-background-size: 100px auto;
+		   -moz-background-size: 100px auto;
+		     -o-background-size: 100px auto;
+			background-size: 100px auto;
+		    
+		-webkit-margin-before: 0;
+		 -webkit-margin-after: 0;
+		 -webkit-margin-start: 0;
+		   -webkit-margin-end: 0;
+		}
+	    
+	    #main #about .content ul{
+		height: auto;
+		padding-bottom: 30px;
+		margin-top: 20px;
+		}
+		
+		#main #about .content ul li{
+		    margin: 10px auto 0 auto;
+		    width: 90%;
+		    padding: 15px 20px 20px 20px;
+		    min-height: inherit;
+		    }
+		    
+		    #main #about .content ul li h3 { font-size: 1.5em; }
+		    #main #about .content ul li p { font-size: 1em; }
+    
+    #main #process { 
+	    width: 100% !important;
+	    max-width: 100%;
+	    padding: 30px 0 0 0;
+	    }
+	
+	#main #process .content {
+	    max-width: 95%;
+	    width: 95%;
+	    padding: 0;
+	    }
+	
+	    #main #process .content h2{
+		font-size: 2em;
+		width: 100%;
+		}
+	    
+	    #main #process .content ul { }
+		#main #process .content ul li { }
+		    #main #process .content ul li .detail-slide { }
+			#main #process .content ul li .detail-slide aside {
+			    width: 100%;
+			    float: none;
+			    margin-bottom: 10px;
+			    padding: 0;
+			    }
+			    #main #process .content ul li .detail-slide aside h3 {
+				font-size: 1.5em;
+				width: 98%;
+				}
+			    #main #process .content ul li .detail-slide aside h4 {
+				font-size: 1.2em;
+				width: 98%;
+				margin-bottom: 1em;
+				}
+			    #main #process .content ul li .detail-slide aside p {
+				font-size: 1em;
+				margin: 0 auto;
+				width: 98%;
+				margin-bottom: 0.5em;
+				}
+			    #main #process .content ul li .detail-slide aside a {
+				font-size: 1em;
+				text-align: right;
+				width: 95%;
+				display: block;
+				margin-bottom: 2em;
+				}
+			    
+			#main #process .content ul li .detail-slide .showcase {
+			    width: 100%;
+			    float: none;
+			    }
+			    #main #process .content ul li .detail-slide .showcase ul.media-container {
+				height: 215px;
+				}
+    
+    
+    
+    
+    
+     #main #contact { 
+	    width: 100% !important;
+	    max-width: 100%;
+	    padding: 30px 0 0 0;
+	    }
+	
+	#main #contact .content {
+	    max-width: 95%;
+	    width: 95%;
+	    padding: 0 0 55px 0;
+	    background-image: url(../images/corgi.png);
+	    background-repeat: no-repeat;
+	    background-position: 99% 99%;
+	    }
+	
+	    #main #contact .content h2 {
+		font-size: 2em;
+		width: 100%;
+		}
+		
+	    #main #contact .content ul#columns {
+		height: auto;
+		padding-bottom: 30px;
+		margin-top: 20px;
+		}
+	    #main #contact .content ul#columns li.aThird {
+		margin: 10px auto 0 auto;
+		width: 90%;
+		padding: 15px 20px 20px 20px;
+		min-height: inherit;
+		}
+	    #main #contact .content ul#columns li.aThird:nth-child(2){
+		display: none;
+	        }
+	    #main #contact .content ul#columns li.aThird:nth-child(3){
+		background-image: none;
+	        }
+	    #main #contact .content ul#columns li.aThird p {
+		font-size: 1em;
+		}
+	    
+	    #main #contact .content ul#columns li.aThird ul#social { }
+	    #main #contact .content ul#columns li.aThird ul#social li { }
+	    #main #contact .content ul#columns li.aThird ul#social li a { }
+	    
+	    #main #contact .content ul#columns li.aThird ul#social ul#twitter_update_list { }
+	    #main #contact .content ul#columns li.aThird ul#social ul#twitter_update_list li { }
+	    #main #contact .content ul#columns li.aThird ul#social ul#twitter_update_list li span { }
+	    #main #contact .content ul#columns li.aThird ul#social ul#twitter_update_list li a { }
+
+
+}
+
+
