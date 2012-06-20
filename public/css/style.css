@@ -213,7 +213,7 @@ nav ul #nav-top a:hover {
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   border: 1px solid rgba(0, 0, 0, 0.08);
-  background: rgba(0, 0, 0, 0.2);
+  background: #71873b;
   min-height: 150px;
   line-height: 1.8em;
   -webkit-font-smoothing: antialiased;
@@ -341,7 +341,7 @@ nav li,
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
-  background: rgba(0, 0, 0, 0.2);
+  background: #c3c4be;
   border: 1px solid rgba(0, 0, 0, 0.2);
   cursor: pointer;
   display: inline-block;
@@ -362,7 +362,7 @@ nav li,
   background: #e0e4cc url('../images/user_persona1.jpg') center 0 no-repeat;
 }
 #first_showcase .media-container li.second {
-  background: rgba(0, 0, 0, 0.2) url('../images/userflow1.jpg') center 0 no-repeat;
+  background: #f4f6ee url('../images/userflow1.jpg') center 0 no-repeat;
 }
 #first_showcase .media-container li.third {
   background: #000000 url('../images/sketches.jpg') center 0 no-repeat;
@@ -403,7 +403,7 @@ nav li,
   -webkit-border-radius: 7px;
   margin-right: 1.3%;
   border: 1px solid rgba(0, 0, 0, 0.08);
-  background: rgba(0, 0, 0, 0.2);
+  background: #28282b;
   min-height: 200px;
   line-height: 1.8em;
   -webkit-font-smoothing: antialiased;
