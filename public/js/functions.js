@@ -4,7 +4,7 @@ $(document).ready(function() {
   var _currentImage;
   var _currentCircle;
   var _currentElement;
-  var _currentPage = '#first_showcase '
+  var _currentPage = '#first_showcase ';
   var _lastImage;
   var _elements           = $('.detail-slide.active .media-container li');
   var _indicator_elements = $('.detail-slide.active .place_indicator li');
