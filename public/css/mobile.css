@@ -7,7 +7,7 @@
 	overflow: hidden;
         }
     
-    nav { }
+    nav { display: none; }
     
 	nav ul{
 	    float: none !important;
@@ -27,7 +27,7 @@
 
 	#nav-top, #nav-top a.active { display: none; }
 
-    #main { background-color: #F4F6EE; }
+    #main { background-color: #F4F6EE; margin: 0 0 2em 0; }
     
     #main #about { }
     

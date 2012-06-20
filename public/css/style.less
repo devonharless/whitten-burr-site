@@ -293,7 +293,7 @@ nav li, #process .showcase {
         .image-replacement(10px, 10px);
         .border_radius(10px);
         background: #c3c4be;
-        border: 1px solid darken(@lightGray, 30%);
+        border: 1px solid darken(#c3c4be, 20%);
         cursor: pointer;
         display: inline-block;
 
@@ -434,6 +434,14 @@ footer{
   display: none;
 }
 
+
+/*------------------------------------------------------------------
+IE8 
+*/
+
+.ie8 #main .content {
+  width: 960px;
+}
 
 @import "helpers";
 

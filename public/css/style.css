@@ -342,7 +342,7 @@ nav li,
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   background: #c3c4be;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid #929389;
   cursor: pointer;
   display: inline-block;
 }
@@ -494,6 +494,12 @@ nav li,
 */
 footer {
   display: none;
+}
+/*------------------------------------------------------------------
+IE8 
+*/
+.ie8 #main .content {
+  width: 960px;
 }
 /* Variables
  * Variables to customize the look and feel of Bootstrap
