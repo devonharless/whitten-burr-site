@@ -1,7 +1,7 @@
 /* Tablet -- iPads (portrait and landscape) */
 
 @media all and (min-width: 1050px) {
-	#main #process .showcase li {
+	#main #process .showcase li, #main #work .showcase li {
 		background-size: 100% auto;
 	}
 }
@@ -130,47 +130,47 @@
   #main #about .content ul li h3 { font-size: 1.5em; }
   #main #about .content ul li p { font-size: 1em; }
 
-	#main #process { 
+	#main #process, #main #work { 
 		width: 100% !important;
 		max-width: 100%;
 		padding: 30px 0 0 0;
 	}
 
-	#main #process .content {
+	#main #process .content, #main #work .content {
 		max-width: 95%;
 		width: 95%;
 		padding: 0;
 	}
 
-	#main #process .content h2{
+	#main #process .content h2, #main #work .content h2{
 		font-size: 2em;
 		width: 100%;
 	}
 	
-	#main #process .content ul li .detail-slide aside {
+	#main #process .content ul li .detail-slide aside, #main #work .content ul li .detail-slide aside {
     width: 100%;
     float: none;
     margin-bottom: 10px;
     padding: 0;
   }
-  #main #process .content ul li .detail-slide aside h3 {
+  #main #process .content ul li .detail-slide aside h3, #main #work .content ul li .detail-slide aside h3 {
 		font-size: 1.5em;
 		width: 98%;
 	}
-  #main #process .content ul li .detail-slide aside h4 {
+  #main #process .content ul li .detail-slide aside h4, #main #work .content ul li .detail-slide aside h4 {
 		font-size: 1.2em;
 		width: 98%;
 		margin-bottom: 1em;
 	}
 	
-	#main #process .content ul li .detail-slide aside p {
+	#main #process .content ul li .detail-slide aside p, #main #work .content ul li .detail-slide aside p {
 		font-size: 1em;
 		margin: 0 auto;
 		width: 98%;
 		margin-bottom: 0.5em;
 	}
 	    
-	#main #process .content ul li .detail-slide aside a {
+	#main #process .content ul li .detail-slide aside a, #main #work .content ul li .detail-slide aside a {
 		font-size: 1em;
 		text-align: right;
 		width: 95%;
@@ -178,16 +178,16 @@
 		margin-bottom: 2em;
 	}
 	    
-	#main #process .content ul li .detail-slide .showcase {
+	#main #process .content ul li .detail-slide .showcase, #main #work .content ul li .detail-slide .showcase {
     width: 100%;
     float: none;
   }
    
-  #main #process .content ul li .detail-slide .showcase ul.media-container {
+  #main #process .content ul li .detail-slide .showcase ul.media-container, #main #work .content ul li .detail-slide .showcase ul.media-container {
   	height: 215px;
 	}
 
-	#main #process .showcase li {
+	#main #process .showcase li, #main #work .showcase li {
 		background-size: 100% auto;
 	}
 
