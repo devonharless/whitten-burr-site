@@ -4,7 +4,7 @@ $(document).ready(function() {
   var _currentImage;
   var _currentCircle;
   var _currentElement;
-  var _currentPage = '#first_showcase ';
+  var _currentPage = '.first_showcase ';
   var _lastImage;
   var _elements           = $('.detail-slide.active .media-container li');
   var _indicator_elements = $('.detail-slide.active .place_indicator li');
@@ -28,34 +28,34 @@ $(document).ready(function() {
     
     event.preventDefault();
     
-    _currentProcess = $('#first_showcase').parent();
-    _nextProcess    = $('#second_showcase').parent();
+    _currentProcess = $('.first_showcase').parent();
+    _nextProcess    = $('.second_showcase').parent();
     $(_currentProcess[0]).fadeOut('slow', function() {
       // Animation complete.
       $(_nextProcess[0]).fadeIn();
       $(_nextProcess[0]).addClass('active');
       $(_currentProcess[0]).removeClass('active');
-      _currentPage = '#second_showcase ';
+      _currentPage = '.second_showcase ';
     });
-    _elements = $('#second_showcase .media-container li');
-    _indicator_elements = $('#second_showcase .place_indicator li');
+    _elements = $('.second_showcase .media-container li');
+    _indicator_elements = $('.second_showcase .place_indicator li');
   }
 
   function showPreviousProcess(event) {
     
     event.preventDefault();
-    _currentProcess = $('#second_showcase').parent();
-    _nextProcess    = $('#first_showcase').parent();
+    _currentProcess = $('.second_showcase').parent();
+    _nextProcess    = $('.first_showcase').parent();
     $(_currentProcess[0]).fadeOut('slow', function() {
       // Animation complete.
       $(_nextProcess[0]).fadeIn();
       $(_nextProcess[0]).addClass('active');
       $(_currentProcess[0]).removeClass('active');
-      _currentPage = '#first_showcase '
+      _currentPage = '.first_showcase '
     });
 
-    _elements = $('#first_showcase .media-container li');
-    _indicator_elements = $('#first_showcase .place_indicator li');
+    _elements = $('.first_showcase .media-container li');
+    _indicator_elements = $('.first_showcase .place_indicator li');
   }
 
   function triggerNextImage(event) {
@@ -80,9 +80,11 @@ $(document).ready(function() {
     if($(_currentImage).hasClass('active')) {
     
       if(_currentImage != _lastImage[0]) {
-
+        console.log('blub >> ', _lastImage[0])
         _currentElement = '.' + $(event.target).next().attr('class').split(' ')[0];
         _selectedElements = _currentPage + _currentElement;
+
+        console.log('>> ', _selectedElements, ' ', _currentPage, ' ', _currentElement)
 
         $(_selectedElements).siblings().removeClass('active');
         $(_selectedElements).addClass('active');
@@ -92,6 +94,8 @@ $(document).ready(function() {
 
         _currentElement = '.' + $(_elements[0]).attr('class');
         _selectedElements = _currentPage + _currentElement;
+
+        console.log('END>> ', _selectedElements, ' ', _currentPage, ' ', _currentElement)
 
         $(_selectedElements).siblings().removeClass('active');
         $(_selectedElements).addClass('active');

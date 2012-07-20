@@ -381,22 +381,22 @@ nav li,
   text-decoration: none;
   display: inline;
 }
-#first_showcase .media-container li.first {
+#main .first_showcase .media-container li.first {
   background: #e0e4cc url('../images/user_persona1.jpg') center 0 no-repeat;
 }
-#first_showcase .media-container li.second {
+#main .first_showcase .media-container li.second {
   background: #f4f6ee url('../images/userflow1.jpg') center 0 no-repeat;
 }
-#first_showcase .media-container li.third {
+#main .first_showcase .media-container li.third {
   background: #000000 url('../images/sketches.jpg') center 0 no-repeat;
 }
-#second_showcase .media-container li.first {
+#main .second_showcase .media-container li.first {
   background: #000000 url('../images/wireframe.jpg') center 0 no-repeat;
 }
-#second_showcase .media-container li.second {
+#main .second_showcase .media-container li.second {
   background: #ffffff url('../images/design.jpg') center 0 no-repeat;
 }
-#second_showcase .media-container li.third {
+#main .second_showcase .media-container li.third {
   background: #434448 url('../images/code.jpg') center 0 no-repeat;
 }
 #contact {
