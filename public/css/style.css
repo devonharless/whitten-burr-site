@@ -291,6 +291,10 @@ nav li,
   clear: none;
   float: left;
 }
+#process aside p span,
+#work aside p span {
+  font-weight: bold;
+}
 #process .showcase,
 #work .showcase {
   width: 60%;

@@ -53,6 +53,15 @@
 	#main #contact .content ul#columns li.aThird:nth-child(3) {
 	  background-size: 10%;
 	}
+
+	#main #process .showcase .place_indicator, #main #work .showcase .place_indicator {
+		width: 64px;
+	}
+
+	#main #process .showcase .place_indicator li, #main #work .showcase .place_indicator li {
+		width: 14px;
+		height: 14px;
+	}
 }
 
 /* Mobile */
@@ -189,6 +198,10 @@
 
 	#main #process .showcase li, #main #work .showcase li {
 		background-size: 100% auto;
+	}
+
+	#main #process .showcase .place_indicator, #main #work .showcase .place_indicator {
+		width: 64px;
 	}
 
 	#main #contact { 
