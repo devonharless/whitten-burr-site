@@ -530,3 +530,27 @@ IE8
 /* Mixins
  * Snippets of reusable CSS to develop faster and keep code readable
  * ----------------------------------------------------------------- */
+#main #disney .media-container li.first {
+  background: #e0e4cc url('../images/client/disney_1.jpg') center 0 no-repeat;
+}
+#main #disney .media-container li.second {
+  background: #f4f6ee url('../images/client/disney_2.jpg') center 0 no-repeat;
+}
+#main #disney .media-container li.third {
+  background: #000000 url('../images/client/disney_3.jpg') center 0 no-repeat;
+}
+#main #puppet .media-container li.first {
+  background: #e0e4cc url('../images/client/puppet_1.jpg') center 0 no-repeat;
+}
+#main #irep .media-container li.first {
+  background: #e0e4cc url('../images/client/irep.jpg') center 0 no-repeat;
+}
+#main #asus .media-container li.first {
+  background: #e0e4cc url('../images/client/asus.jpg') center 0 no-repeat;
+}
+#main #penn .media-container li.first {
+  background: #e0e4cc url('../images/client/penn.jpg') center 0 no-repeat;
+}
+#main #epsilon .media-container li.first {
+  background: #e0e4cc url('../images/client/epsilon.jpg') center 0 no-repeat;
+}
