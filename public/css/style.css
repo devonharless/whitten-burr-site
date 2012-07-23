@@ -542,6 +542,9 @@ IE8
 #main #puppet .media-container li.first {
   background: #e0e4cc url('../images/client/puppet_1.jpg') center 0 no-repeat;
 }
+#main #puppet .media-container li.second {
+  background: #e0e4cc url('../images/client/puppet_2.jpg') center 0 no-repeat;
+}
 #main #irep .media-container li.first {
   background: #e0e4cc url('../images/client/irep.jpg') center 0 no-repeat;
 }
@@ -553,4 +556,7 @@ IE8
 }
 #main #epsilon .media-container li.first {
   background: #e0e4cc url('../images/client/epsilon.jpg') center 0 no-repeat;
+}
+#main #ae .media-container li.first {
+  background: #e0e4cc url('../images/client/ae.jpg') center 0 no-repeat;
 }
