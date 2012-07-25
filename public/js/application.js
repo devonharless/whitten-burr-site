@@ -6,31 +6,59 @@ $(document).ready(function() {
   var _currentElement;
 
   var _lastImage;
-  var _elements           = $('.detail-slide.active .media-container li');
-  var _indicator_elements = $('.detail-slide.active .place_indicator li');
 
-  
   //Process Slide Controller
   processSlide();
+  processPage();
 
   function processSlide() {
     $('.media-container li').live('click', showNextImage);
     $('.place_indicator li').live('click', triggerNextImage);
   } 
 
+  function processPage() {
+    $('#first-process').live('click', showNextProcess);
+    $('#second-process').live('click', showPreviousProcess);
+  }
+
+  function showNextProcess(event) {
+    
+    event.preventDefault();
+    
+    _currentProcess = $('.first_showcase').parent();
+    _nextProcess    = $('.second_showcase').parent();
+    $(_currentProcess[0]).fadeOut('slow', function() {
+      // Animation complete.
+      $(_nextProcess[0]).fadeIn();
+      $(_nextProcess[0]).addClass('active');
+      $(_currentProcess[0]).removeClass('active');
+    });
+  }
+
+  function showPreviousProcess(event) {
+    
+    event.preventDefault();
+    _currentProcess = $('.second_showcase').parent();
+    _nextProcess    = $('.first_showcase').parent();
+    $(_currentProcess[0]).fadeOut('slow', function() {
+      // Animation complete.
+      $(_nextProcess[0]).fadeIn();
+      $(_nextProcess[0]).addClass('active');
+      $(_currentProcess[0]).removeClass('active');
+    });
+  }   
+
   function triggerNextImage(event) {
     event.preventDefault();
 
-    console.log('test >> ', event.target)
+    _currentClass   = '.' + $(event.target).attr('class').split(' ')[0];
+    _currentElement = $(event.target);
 
-    $(event.target).siblings().removeClass('active');
-
-    _currentElement = '.' + $(event.target).attr('class').split(' ')[0];
-
-    //_selectedElements = _currentPage + _currentElement;
-    
+    $(_currentElement).parent().siblings().find('li').removeClass('active');
     $(_currentElement).siblings().removeClass('active');
     $(_currentElement).addClass('active');
+    $(_currentElement).parent().siblings().find(_currentClass).addClass('active');
+
   }
 
   function showNextImage(event) {
@@ -39,29 +67,22 @@ $(document).ready(function() {
     _currentImage  = event.target;
     _lastImage     = $(_currentImage).parent().children().eq(-1);
    
-    //_currentPage   = $(event.target).parent().parent()[0];
-
-    console.log('the _lastImage >> ', _lastImage[0], ' currentImage >> ', _currentImage);
-   
     if($(_currentImage).hasClass('active')) {
     
       if(_currentImage != _lastImage[0]) {
-        console.log('blub >> ', _lastImage[0])
-        _currentElement = '.' + $(event.target).next().attr('class').split(' ')[0];
-        //_selectedElements = _currentPage + _currentElement;
-
-        //console.log('>> ', _selectedElements, ' ', _currentPage, ' ', _currentElement)
-
+        
+        _currentElement = $(event.target).next();
+        _currentClass   = '.' + $(event.target).next().attr('class').split(' ')[0];
+        
         $(_currentElement).siblings().removeClass('active');
+        $(_currentElement).parent().siblings().find('li').removeClass('active');
         $(_currentElement).addClass('active');
+        $(_currentElement).parent().siblings().find(_currentClass).addClass('active');
       
       }
       else {
-
-        console.log('THE END >> ')
+        //It's the last image, go back to the beginning!
         _currentElement = $(_currentImage).parent().children().eq(0)[0];
-
-        console.log('_currentElement >> ', $(_currentElement).parent().siblings().find('.first'))
 
         $(_currentElement).siblings().removeClass('active');
         $(_currentElement).parent().siblings().find('li').removeClass('active');
