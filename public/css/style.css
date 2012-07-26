@@ -560,3 +560,12 @@ IE8
 #main #ae .media-container li.first {
   background: #e0e4cc url('../images/client/ae.jpg') center 0 no-repeat;
 }
+#main #adaptu .media-container li.first {
+  background: #e0e4cc url('../images/client/adaptu_1.jpg') center 0 no-repeat;
+}
+#main #adaptu .media-container li.second {
+  background: #e0e4cc url('../images/client/adaptu_2.jpg') center 0 no-repeat;
+}
+#main #adaptu .media-container li.third {
+  background: #e0e4cc url('../images/client/adaptu_3.jpg') center 0 no-repeat;
+}
