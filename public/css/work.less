@@ -1,3 +1,31 @@
+/* Client List */
+
+#main #clients {
+  color: @offWhite;
+  background: #000 url('../images/pattern1.jpg') repeat;
+
+  p {
+    .set_font(1.1em, 200);
+    margin-top: 2.8em;
+  }
+
+  article {
+    .set_float(none, left);
+    .content_container(20%, auto, 0, 0, 0, 0);
+    margin-top: 1.2em;
+    margin-right: 3.7em;
+    h3 {
+      .set_font(1.5em, 400);
+      color: lighten(spin(@seaFoam, -95), 12%);
+    }
+
+    .client_list li {
+      padding: 0.5em 0;
+      border-bottom: 1px dotted darken(@darkRed, 10%);
+    }
+  }
+}
+
 #main #disney .media-container li {
   &.first {
     background: darken(@cream, 10%) url('../images/client/disney_1.jpg') center 0 no-repeat;

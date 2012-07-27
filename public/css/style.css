@@ -243,11 +243,13 @@ nav li,
   user-select: none;
 }
 #process,
-#work {
+#work,
+#clients {
   background: #f4f6ee;
 }
 #process h3,
-#work h3 {
+#work h3,
+#clients h3 {
   font-size: 1.7em;
   font-weight: 500;
   text-decoration: none;
@@ -255,7 +257,8 @@ nav li,
   color: #434448;
 }
 #process h4,
-#work h4 {
+#work h4,
+#clients h4 {
   font-size: 1.25em;
   font-weight: 300;
   text-decoration: none;
@@ -264,14 +267,16 @@ nav li,
   font-style: italic;
 }
 #process p,
-#work p {
+#work p,
+#clients p {
   font-size: 1em;
   font-weight: 200;
   text-decoration: none;
   line-height: 1.6em;
 }
 #process .detail-slide,
-#work .detail-slide {
+#work .detail-slide,
+#clients .detail-slide {
   width: 100%;
   height: auto;
   margin: 3em 0;
@@ -279,11 +284,13 @@ nav li,
   display: none;
 }
 #process .detail-slide.active,
-#work .detail-slide.active {
+#work .detail-slide.active,
+#clients .detail-slide.active {
   display: block;
 }
 #process aside,
-#work aside {
+#work aside,
+#clients aside {
   width: 31%;
   height: auto;
   margin: 0 0;
@@ -292,11 +299,13 @@ nav li,
   float: left;
 }
 #process aside p span,
-#work aside p span {
+#work aside p span,
+#clients aside p span {
   font-weight: bold;
 }
 #process .showcase,
-#work .showcase {
+#work .showcase,
+#clients .showcase {
   width: 60%;
   height: auto;
   margin: 0 0;
@@ -305,7 +314,8 @@ nav li,
   float: right;
 }
 #process .showcase .media-container,
-#work .showcase .media-container {
+#work .showcase .media-container,
+#clients .showcase .media-container {
   width: 100%;
   height: 380px;
   margin: 0 0;
@@ -313,7 +323,8 @@ nav li,
   border: 1px solid #e0e4cc;
 }
 #process .showcase li,
-#work .showcase li {
+#work .showcase li,
+#clients .showcase li {
   width: 100%;
   height: auto;
   display: block;
@@ -336,18 +347,21 @@ nav li,
   display: none;
 }
 #process .showcase li.active,
-#work .showcase li.active {
+#work .showcase li.active,
+#clients .showcase li.active {
   display: block;
 }
 #process .showcase .place_indicator,
-#work .showcase .place_indicator {
+#work .showcase .place_indicator,
+#clients .showcase .place_indicator {
   width: 52px;
   height: auto;
   margin: 1% auto;
   padding: 0 0;
 }
 #process .showcase .place_indicator li,
-#work .showcase .place_indicator li {
+#work .showcase .place_indicator li,
+#clients .showcase .place_indicator li {
   margin-right: 2px;
   width: 10px;
   height: 10px;
@@ -365,17 +379,21 @@ nav li,
   display: inline-block;
 }
 #process .showcase .place_indicator li.active,
-#work .showcase .place_indicator li.active {
+#work .showcase .place_indicator li.active,
+#clients .showcase .place_indicator li.active {
   background: #69bda8;
 }
 #process .showcase .place_indicator li:hover,
-#work .showcase .place_indicator li:hover {
+#work .showcase .place_indicator li:hover,
+#clients .showcase .place_indicator li:hover {
   background: #69bda8;
 }
 #process .process-nav,
 #work .process-nav,
+#clients .process-nav,
 #process .work-nav,
-#work .work-nav {
+#work .work-nav,
+#clients .work-nav {
   font-size: 1.1em;
   font-weight: 300;
   text-decoration: none;
@@ -400,7 +418,7 @@ nav li,
   background: #434448 url('../images/code.jpg') center 0 no-repeat;
 }
 #contact {
-  background: #323336;
+  background: #2f3033;
   border-bottom: 20px solid #181819;
   margin-bottom: 0 !important;
 }
@@ -530,6 +548,37 @@ IE8
 /* Mixins
  * Snippets of reusable CSS to develop faster and keep code readable
  * ----------------------------------------------------------------- */
+/* Client List */
+#main #clients {
+  color: #f2f3e8;
+  background: #000000 url('../images/pattern1.jpg') repeat;
+}
+#main #clients p {
+  font-size: 1.1em;
+  font-weight: 200;
+  text-decoration: none;
+  margin-top: 2.8em;
+}
+#main #clients article {
+  clear: none;
+  float: left;
+  width: 20%;
+  height: auto;
+  margin: 0 0;
+  padding: 0 0;
+  margin-top: 1.2em;
+  margin-right: 3.7em;
+}
+#main #clients article h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+  text-decoration: none;
+  color: #c6d093;
+}
+#main #clients article .client_list li {
+  padding: 0.5em 0;
+  border-bottom: 1px dotted #2f1d21;
+}
 #main #disney .media-container li.first {
   background: #e0e4cc url('../images/client/disney_1.jpg') center 0 no-repeat;
 }
