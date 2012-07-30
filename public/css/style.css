@@ -418,7 +418,7 @@ nav li,
   background: #434448 url('../images/code.jpg') center 0 no-repeat;
 }
 #contact {
-  background: #2f3033;
+  background: #2f3033 url('../images/pattern2.jpg') repeat;
   border-bottom: 20px solid #181819;
   margin-bottom: 0 !important;
 }
@@ -444,7 +444,7 @@ nav li,
   -webkit-border-radius: 7px;
   margin-right: 1.3%;
   border: 1px solid rgba(0, 0, 0, 0.08);
-  background: #28282b;
+  background: #262626;
   min-height: 200px;
   line-height: 1.8em;
   -webkit-font-smoothing: antialiased;
@@ -551,7 +551,7 @@ IE8
 /* Client List */
 #main #clients {
   color: #f2f3e8;
-  background: #000000 url('../images/pattern1.jpg') repeat;
+  background: #4e3137 url('../images/pattern1.jpg') repeat;
 }
 #main #clients p {
   font-size: 1.1em;
@@ -562,12 +562,12 @@ IE8
 #main #clients article {
   clear: none;
   float: left;
-  width: 20%;
+  width: 21%;
   height: auto;
   margin: 0 0;
   padding: 0 0;
   margin-top: 1.2em;
-  margin-right: 3.7em;
+  margin-right: 4em;
 }
 #main #clients article h3 {
   font-size: 1.5em;
@@ -576,8 +576,18 @@ IE8
   color: #c6d093;
 }
 #main #clients article .client_list li {
-  padding: 0.5em 0;
+  padding: 0.6em 0 0.4em;
   border-bottom: 1px dotted #2f1d21;
+}
+#main #clients article .client_list li a,
+#main #clients article .client_list li a:visited {
+  color: #99ccd2;
+}
+#main #clients article .client_list li a:hover {
+  color: #57c1cc;
+}
+#main #clients article:nth-child(6) {
+  margin-right: 0;
 }
 #main #disney .media-container li.first {
   background: #e0e4cc url('../images/client/disney_1.jpg') center 0 no-repeat;
