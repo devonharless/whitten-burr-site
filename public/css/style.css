@@ -269,7 +269,7 @@ nav li,
 #process p,
 #work p,
 #clients p {
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: 200;
   text-decoration: none;
   line-height: 1.6em;
@@ -550,7 +550,7 @@ IE8
  * ----------------------------------------------------------------- */
 /* Client List */
 #main #clients {
-  color: #f2f3e8;
+  color: #f4f6ee;
   background: #4e3137 url('../images/pattern1.jpg') repeat;
 }
 #main #clients p {
@@ -628,16 +628,16 @@ IE8
 #main #adaptu .media-container li.third {
   background: #e0e4cc url('../images/client/adaptu_3.jpg') center 0 no-repeat;
 }
-#main #belmontGuesthouse .media-container li.first {
+#main #belmont .media-container li.first {
   background: #e0e4cc url('../images/client/belmont.jpg') center 0 no-repeat;
 }
-#main #emilyGriffith .media-container li.first {
+#main #emily .media-container li.first {
   background: #e0e4cc url('../images/client/emily_1.jpg') center 0 no-repeat;
 }
-#main #emilyGriffith .media-container li.second {
+#main #emily .media-container li.second {
   background: #e0e4cc url('../images/client/emily_2.jpg') center 0 no-repeat;
 }
-#main #emilyGriffith .media-container li.third {
+#main #emily .media-container li.third {
   background: #e0e4cc url('../images/client/emily_3.jpg') center 0 no-repeat;
 }
 #main #malaria .media-container li.first {
@@ -646,13 +646,13 @@ IE8
 #main #malaria .media-container li.second {
   background: #e0e4cc url('../images/client/gates_2.jpg') center 0 no-repeat;
 }
-#main #jobs .media-container li.first {
+#main #ge_jobs .media-container li.first {
   background: #e0e4cc url('../images/client/ge_1.jpg') center 0 no-repeat;
 }
-#main #jobs .media-container li.second {
+#main #ge_jobs .media-container li.second {
   background: #e0e4cc url('../images/client/ge_2.jpg') center 0 no-repeat;
 }
-#main #jobs .media-container li.third {
+#main #ge_jobs .media-container li.third {
   background: #e0e4cc url('../images/client/ge_3.jpg') center 0 no-repeat;
 }
 #main #hewlett .media-container li.first {
@@ -663,4 +663,46 @@ IE8
 }
 #main #hewlett .media-container li.third {
   background: #e0e4cc url('../images/client/hf_3.jpg') center 0 no-repeat;
+}
+#main #smot .media-container li.first {
+  background: #e0e4cc url('../images/client/pg_1.jpg') center 0 no-repeat;
+}
+#main #smot .media-container li.second {
+  background: #e0e4cc url('../images/client/pg_2.jpg') center 0 no-repeat;
+}
+#main #smot .media-container li.third {
+  background: #e0e4cc url('../images/client/pg_3.jpg') center 0 no-repeat;
+}
+#main #virginia_garcia .media-container li.first {
+  background: #e0e4cc url('../images/client/garcia_1.jpg') center 0 no-repeat;
+}
+#main #virginia_garcia .media-container li.second {
+  background: #e0e4cc url('../images/client/garcia_2.jpg') center 0 no-repeat;
+}
+#main #sean .media-container li.first {
+  background: #e0e4cc url('../images/client/sean.jpg') center 0 no-repeat;
+}
+#main #smot .media-container li.first {
+  background: #e0e4cc url('../images/client/pg_1.jpg') center 0 no-repeat;
+}
+#main #smot .media-container li.second {
+  background: #e0e4cc url('../images/client/pg_2.jpg') center 0 no-repeat;
+}
+#main #smot .media-container li.third {
+  background: #e0e4cc url('../images/client/pg_3.jpg') center 0 no-repeat;
+}
+#main #yahoo_mail .media-container li.first {
+  background: #e0e4cc url('../images/client/yahoo_1.jpg') center 0 no-repeat;
+}
+#main #yahoo_mail .media-container li.second {
+  background: #e0e4cc url('../images/client/yahoo_2.jpg') center 0 no-repeat;
+}
+#main #wwss .media-container li.first {
+  background: #e0e4cc url('../images/client/wwss_1.jpg') center 0 no-repeat;
+}
+#main #wwss .media-container li.second {
+  background: #e0e4cc url('../images/client/wwss_2.jpg') center 0 no-repeat;
+}
+#main #wwss .media-container li.third {
+  background: #e0e4cc url('../images/client/wwss_3.jpg') center 0 no-repeat;
 }
