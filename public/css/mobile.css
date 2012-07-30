@@ -62,6 +62,24 @@
 		width: 14px;
 		height: 14px;
 	}
+
+	#main #clients article {
+		width: 100%;
+		font-size: 88%;
+		float: none;
+	}
+
+	#main #clients article .client_list li {
+		width: 22%;
+		margin: 0% 3% 0 0;
+		padding: 0.5em 0;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	#main #clients article .client_list li:nth-child(4n+0) {
+		margin-right: 0;
+	}
 }
 
 /* Mobile */
@@ -139,19 +157,36 @@
   #main #about .content ul li h3 { font-size: 1.5em; }
   #main #about .content ul li p { font-size: 1em; }
 
-	#main #process, #main #work { 
+	#main #process, #main #work, #main #clients { 
 		width: 100% !important;
 		max-width: 100%;
 		padding: 30px 0 0 0;
 	}
 
-	#main #process .content, #main #work .content {
+	#main #clients article {
+		font-size: 78%;
+		padding-bottom: 2em;
+	}
+
+	#main #clients article .client_list li {
+		width: 48%;
+		margin: 0.2em 3% 0.2em 0;
+		padding: 0.8em 0;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	#main #clients article .client_list li:nth-child(even) {
+		margin-right: 0;
+	}
+
+	#main #process .content, #main #work .content, #main #clients .content {
 		max-width: 95%;
 		width: 95%;
 		padding: 0;
 	}
 
-	#main #process .content h2, #main #work .content h2{
+	#main #process .content h2, #main #work .content h2, #main #clients .content h2 {
 		font-size: 2em;
 		width: 100%;
 	}
