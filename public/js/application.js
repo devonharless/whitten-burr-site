@@ -105,7 +105,7 @@ $(document).ready(function() {
  
   $('a[href*=#]').each(function() {
     var thisPath = filterPath(this.pathname) || locationPath;
-    if (  locationPath == thisPath
+    if (locationPath == thisPath
     && (location.hostname == this.hostname || !this.hostname)
     && this.hash.replace(/#/,'') ) {
       var $target = $(this.hash), target = this.hash;

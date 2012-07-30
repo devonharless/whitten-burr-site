@@ -2,7 +2,7 @@
 
 #main #clients {
   color: @offWhite;
-  background: #000 url('../images/pattern1.jpg') repeat;
+  background: @darkRed url('../images/pattern1.jpg') repeat;
 
   p {
     .set_font(1.1em, 200);
@@ -11,18 +11,30 @@
 
   article {
     .set_float(none, left);
-    .content_container(20%, auto, 0, 0, 0, 0);
+    .content_container(21%, auto, 0, 0, 0, 0);
     margin-top: 1.2em;
-    margin-right: 3.7em;
+    margin-right: 4em;
+
     h3 {
       .set_font(1.5em, 400);
       color: lighten(spin(@seaFoam, -95), 12%);
     }
 
     .client_list li {
-      padding: 0.5em 0;
+      padding: 0.6em 0 0.4em;
       border-bottom: 1px dotted darken(@darkRed, 10%);
+
+      a, a:visited {
+        color: lighten(desaturate(@linkColor, 15%), 40%);
+      }
+      a:hover {
+        color: @linkColorHover;
+      }
     }
+  }
+
+  article:nth-child(6) {
+    margin-right: 0;
   }
 }
 
