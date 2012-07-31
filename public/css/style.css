@@ -444,6 +444,9 @@ nav li,
 #main .second_showcase .media-container li.third {
   background: #434448 url('../images/code.jpg') center 0 no-repeat;
 }
+#work {
+  padding-top: 150px;
+}
 #contact {
   background: #2f3033 url('../images/pattern2.jpg') repeat;
   border-bottom: 20px solid #181819;
@@ -577,7 +580,6 @@ IE8
  * ----------------------------------------------------------------- */
 /* Client List */
 #main #clients {
-  padding-top: 150px;
   background: #d1e1e3;
   color: #434448;
 }
