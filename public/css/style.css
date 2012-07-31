@@ -170,38 +170,44 @@ nav ul #nav-top a:hover {
 }
 #about {
   color: #f2f3e8;
-  background: #8ea94a;
+  background: #000000 url('../images/pattern2.jpg') repeat;
 }
 #about h1 {
   display: none;
 }
 #about blockquote {
-  width: 83%;
-  height: auto;
-  margin: 0 0;
-  padding: 2% 0;
   font-size: 2.5em;
   font-weight: 100;
   text-decoration: none;
-  margin-top: 1em;
-  padding-left: 5.3em;
-  text-shadow: 0 1px 1px rgba(255, 255, 0, 0.5);
-  -moz-text-shadow: 0 1px 1px rgba(255, 255, 0, 0.5);
-  -webkit-text-shadow: 0 1px 1px rgba(255, 255, 0, 0.5);
-  min-height: 120px;
-  text-align: left;
-  letter-spacing: .1em;
-  text-decoration: none;
   background: transparent url('../images/logo.png') no-repeat 2% 27%;
+  padding: 5em 2em 4em;
+  background-position: center top;
+  text-align: center;
+  margin: 0 auto;
+  width: 86%;
+  letter-spacing: .1em;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+}
+#about .content {
+  position: relative;
+  top: 0;
+  left: 0;
 }
 #about ul {
-  width: 100%;
-  height: 250px;
+  position: absolute;
+  top: 370px;
+  width: 89%;
+  height: auto;
   margin: 0 0;
   padding: 0 0;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border: 1px solid #313131;
+  background: #222;
   text-align: center;
 }
 #about ul li {
@@ -212,8 +218,6 @@ nav ul #nav-top a:hover {
   border-radius: 7px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  background: #71873b;
   min-height: 150px;
   line-height: 1.8em;
   -webkit-font-smoothing: antialiased;
@@ -225,13 +229,33 @@ nav ul #nav-top a:hover {
 }
 #about ul li h3 {
   font-size: 1.7em;
-  font-weight: 200;
+  font-weight: 400;
   text-decoration: none;
+  color: #d1e1e3;
   text-align: left;
 }
 #about ul li p {
   font-size: 1.1em;
   text-align: left;
+}
+#about #client_work {
+  font-size: 1.1em;
+  font-weight: 200;
+  text-decoration: none;
+  width: 55%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 340px;
+  padding: 2% 20%;
+  border: 1px solid dotted(#222222, 30%);
+  background: #222;
+  line-height: 1.7em;
+  letter-spacing: 0.2em;
 }
 nav li,
 #process .showcase,
@@ -263,7 +287,7 @@ nav li,
   font-weight: 300;
   text-decoration: none;
   margin-bottom: 1.5em;
-  color: #8ea94a;
+  color: #7a4d56;
   font-style: italic;
 }
 #process p,
@@ -279,7 +303,7 @@ nav li,
 #clients .detail-slide {
   width: 100%;
   height: auto;
-  margin: 3em 0;
+  margin: 6em 0;
   padding: 0 0;
   display: none;
 }
@@ -374,19 +398,19 @@ nav li,
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   background: #c3c4be;
-  border: 1px solid #929389;
+  border: 1px solid #686970;
   cursor: pointer;
   display: inline-block;
 }
 #process .showcase .place_indicator li.active,
 #work .showcase .place_indicator li.active,
 #clients .showcase .place_indicator li.active {
-  background: #69bda8;
+  background: #9c626e;
 }
 #process .showcase .place_indicator li:hover,
 #work .showcase .place_indicator li:hover,
 #clients .showcase .place_indicator li:hover {
-  background: #69bda8;
+  background: #9c626e;
 }
 #process .process-nav,
 #work .process-nav,
@@ -398,6 +422,9 @@ nav li,
   font-weight: 300;
   text-decoration: none;
   display: inline;
+}
+#main #process {
+  padding-top: 150px;
 }
 #main .first_showcase .media-container li.first {
   background: #e0e4cc url('../images/user_persona1.jpg') center 0 no-repeat;
@@ -550,8 +577,9 @@ IE8
  * ----------------------------------------------------------------- */
 /* Client List */
 #main #clients {
-  color: #f4f6ee;
-  background: #4e3137 url('../images/pattern1.jpg') repeat;
+  padding-top: 150px;
+  background: #d1e1e3;
+  color: #434448;
 }
 #main #clients p {
   font-size: 1.1em;
@@ -570,18 +598,18 @@ IE8
   margin-right: 5%;
 }
 #main #clients article h3 {
-  font-size: 1.5em;
+  font-size: 1.6em;
   font-weight: 400;
   text-decoration: none;
-  color: #c6d093;
+  color: #4e3137;
 }
 #main #clients article .client_list li {
   padding: 0.6em 0 0.4em;
-  border-bottom: 1px dotted #2f1d21;
+  border-bottom: 1px dotted #abc8cc;
 }
 #main #clients article .client_list li a,
 #main #clients article .client_list li a:visited {
-  color: #99ccd2;
+  color: #315e72;
 }
 #main #clients article .client_list li a:hover {
   color: #57c1cc;
@@ -697,6 +725,12 @@ IE8
 #main #yahoo_mail .media-container li.second {
   background: #e0e4cc url('../images/client/yahoo_2.jpg') center 0 no-repeat;
 }
+#main #yahoo_core .media-container li.first {
+  background: #e0e4cc url('../images/client/core_1.jpg') center 0 no-repeat;
+}
+#main #yahoo_core .media-container li.second {
+  background: #e0e4cc url('../images/client/core_2.jpg') center 0 no-repeat;
+}
 #main #wwss .media-container li.first {
   background: #e0e4cc url('../images/client/wwss_1.jpg') center 0 no-repeat;
 }
@@ -705,4 +739,19 @@ IE8
 }
 #main #wwss .media-container li.third {
   background: #e0e4cc url('../images/client/wwss_3.jpg') center 0 no-repeat;
+}
+#main #periscopic .media-container li.first {
+  background: #e0e4cc url('../images/client/periscopic_1.jpg') center 0 no-repeat;
+}
+#main #periscopic .media-container li.second {
+  background: #e0e4cc url('../images/client/periscopic_2.jpg') center 0 no-repeat;
+}
+#main #periscopic .media-container li.third {
+  background: #e0e4cc url('../images/client/periscopic_3.jpg') center 0 no-repeat;
+}
+#main #house_of_burr .media-container li.first {
+  background: #e0e4cc url('../images/client/burr_1.jpg') center 0 no-repeat;
+}
+#main #house_of_burr .media-container li.second {
+  background: #e0e4cc url('../images/client/burr_2.jpg') center 0 no-repeat;
 }

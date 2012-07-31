@@ -1,8 +1,9 @@
 /* Client List */
 
 #main #clients {
-  color: @cream;
-  background: @darkRed url('../images/pattern1.jpg') repeat;
+  padding-top: 150px;
+  background: @lightBlue;
+  color: @grayDark;
 
   p {
     .set_font(1.1em, 200);
@@ -16,16 +17,16 @@
     margin-right: 5%;
 
     h3 {
-      .set_font(1.5em, 400);
-      color: lighten(spin(@seaFoam, -95), 12%);
+      .set_font(1.6em, 400);
+      color: @darkRed;
     }
 
     .client_list li {
       padding: 0.6em 0 0.4em;
-      border-bottom: 1px dotted darken(@darkRed, 10%);
+      border-bottom: 1px dotted darken(@lightBlue, 12%);
 
       a, a:visited {
-        color: lighten(desaturate(@linkColor, 15%), 40%);
+        color: @blue;
       }
       a:hover {
         color: @linkColorHover;
@@ -202,6 +203,15 @@
   }
 }
 
+#main #yahoo_core .media-container li {
+  &.first {
+    background: darken(@cream, 10%) url('../images/client/core_1.jpg') center 0 no-repeat;
+  }
+    &.second {
+    background: darken(@cream, 10%) url('../images/client/core_2.jpg') center 0 no-repeat;
+  }
+}
+
 #main #wwss .media-container li {
   &.first {
     background: darken(@cream, 10%) url('../images/client/wwss_1.jpg') center 0 no-repeat;
@@ -211,6 +221,27 @@
   }
   &.third {
     background: darken(@cream, 10%) url('../images/client/wwss_3.jpg') center 0 no-repeat;
+  }
+}
+
+#main #periscopic .media-container li {
+  &.first {
+    background: darken(@cream, 10%) url('../images/client/periscopic_1.jpg') center 0 no-repeat;
+  }
+    &.second {
+    background: darken(@cream, 10%) url('../images/client/periscopic_2.jpg') center 0 no-repeat;
+  }
+  &.third {
+    background: darken(@cream, 10%) url('../images/client/periscopic_3.jpg') center 0 no-repeat;
+  }
+}
+
+#main #house_of_burr .media-container li {
+  &.first {
+    background: darken(@cream, 10%) url('../images/client/burr_1.jpg') center 0 no-repeat;
+  }
+    &.second {
+    background: darken(@cream, 10%) url('../images/client/burr_2.jpg') center 0 no-repeat;
   }
 }
 
