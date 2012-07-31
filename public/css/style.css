@@ -444,8 +444,8 @@ nav li,
 #main .second_showcase .media-container li.third {
   background: #434448 url('../images/code.jpg') center 0 no-repeat;
 }
-#work {
-  padding-top: 150px;
+#main #work {
+  padding-top: 100px;
 }
 #contact {
   background: #2f3033 url('../images/pattern2.jpg') repeat;
