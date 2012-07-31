@@ -423,9 +423,6 @@ nav li,
   text-decoration: none;
   display: inline;
 }
-#main #process {
-  padding-top: 150px;
-}
 #main .first_showcase .media-container li.first {
   background: #e0e4cc url('../images/user_persona1.jpg') center 0 no-repeat;
 }
