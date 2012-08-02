@@ -94,7 +94,7 @@ nav {
         color: @blue;
         padding: 1.3em 1em;
         display: block;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.1em;
         text-align: center;
         text-transform: uppercase;
 
@@ -103,12 +103,16 @@ nav {
         }
       }
 
-      /*.active {
+      &.active {
         .set_gradient(lighten(@blue, 4%), darken(@blue, 10%));
-        color: @offWhite;
         border-left: 1px solid darken(@blue, 15%);
         border-right: 1px solid darken(@blue, 15%);
-      }*/
+
+        a {
+          color: @white;
+          font-weight: 500;
+        }
+      }
     }
 
     #nav-top {

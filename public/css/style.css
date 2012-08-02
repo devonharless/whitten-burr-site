@@ -89,24 +89,42 @@ nav ul li {
   font-weight: 500;
   text-decoration: none;
   display: block;
-  /*.active {
-        .set_gradient(lighten(@blue, 4%), darken(@blue, 10%));
-        color: @offWhite;
-        border-left: 1px solid darken(@blue, 15%);
-        border-right: 1px solid darken(@blue, 15%);
-      }*/
-
 }
 nav ul li a {
   color: #315e72;
   padding: 1.3em 1em;
   display: block;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-align: center;
   text-transform: uppercase;
 }
 nav ul li a:hover {
   color: #5497b5;
+}
+nav ul li.active {
+  background-color: #376a80;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#444444), to(#22414e));
+  /* Saf4+, Chrome */
+
+  background-image: -webkit-linear-gradient(top, #376a80, #22414e);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: -moz-linear-gradient(top, #376a80, #22414e);
+  /* FF3.6 */
+
+  background-image: -ms-linear-gradient(top, #376a80, #22414e);
+  /* IE10 */
+
+  background-image: -o-linear-gradient(top, #376a80, #22414e);
+  /* Opera 11.10+ */
+
+  background-image: linear-gradient(top, #376a80, #22414e);
+  border-left: 1px solid #1a323c;
+  border-right: 1px solid #1a323c;
+}
+nav ul li.active a {
+  color: #ffffff;
+  font-weight: 500;
 }
 nav ul #nav-top a {
   width: 9px;

@@ -10,6 +10,7 @@ $(document).ready(function() {
   //Process Slide Controller
   processSlide();
   processPage();
+  slider();
 
   function processSlide() {
     $('.media-container li').live('click', showNextImage);
@@ -92,6 +93,27 @@ $(document).ready(function() {
     }
   }
 
+  function slider() {
+    navY = $('nav').offset().top;
+    navLinks = $('nav').find('a[href^="#"]');
+    sections = $('#main').find('section'); // reversed set of nav sections
+
+    $(window).scroll(function(){
+      scrollPos = $(this).scrollTop();
+
+      $(sections).each(function(){
+        elemHeight = ($(this).offset().top + $(this).height() - 450);
+
+        if(elemHeight >= scrollPos) {
+          element = '#nav-' + $(this).attr('id');
+          $('nav').find(element).addClass('active');
+          $('nav').find(element).siblings().removeClass('active');
+          return false;
+        }
+      });
+    });
+  }
+
   //  Anchor Scrolling, a la the fancy CSS Tricks
   //  http://css-tricks.com/snippets/jquery/smooth-scrolling/
   function filterPath(string) {
@@ -110,9 +132,15 @@ $(document).ready(function() {
     && this.hash.replace(/#/,'') ) {
       var $target = $(this.hash), target = this.hash;
       if (target) {
+
         var targetOffset = $target.offset().top;
         $(this).click(function(event) {
           event.preventDefault();
+
+          if($(this).parent().attr('id') != 'nav-top') {
+            $(this).parent().siblings().removeClass('active')
+            $(this).parent().addClass('active');
+          }
           $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
             location.hash = target;
           });
