@@ -137,10 +137,6 @@ $(document).ready(function() {
         $(this).click(function(event) {
           event.preventDefault();
 
-          if($(this).parent().attr('id') != 'nav-top') {
-            $(this).parent().siblings().removeClass('active')
-            $(this).parent().addClass('active');
-          }
           $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
             location.hash = target;
           });
