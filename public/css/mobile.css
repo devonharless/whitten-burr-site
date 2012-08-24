@@ -95,6 +95,8 @@
 	}
 }
 
+
+
 /* Mobile */
 @media all and (max-width: 550px){
 
@@ -175,6 +177,17 @@
 	    
   #main #about .content ul li h3 { font-size: 1.3em; margin-bottom: 0.5em; }
   #main #about .content ul li p { font-size: 1em; }
+  
+  #main #work #asus,
+  #main #work #penn,
+  #main #work #epsilon,
+  #main #work #ae,
+  #main #work #belmont,
+  #main #work #emily,
+  #main #work #house_of_burr { display: none; }
+
+  #main #work .showcase li:not(.first) { display: none;}
+  #main #work .place_indicator { display: none; }
 
 	#main #process, #main #work, #main #clients { 
 		width: 100% !important;
