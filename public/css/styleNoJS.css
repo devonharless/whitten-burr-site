@@ -1,0 +1,44 @@
+body{ overflow: auto; } 
+
+.sl-slider {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* Slide wrapper and slides */
+
+.sl-slide, .sl-slides-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+} 
+
+.sl-slide blockquote {
+	width: 50%;
+	left: 25%;
+}
+
+/* Dark slides */
+.sl-slide-dark {
+	background: #000;
+}
+
+/* Color 1 slides */
+.sl-slide-color-1 {
+	background: #8d0f39;
+}
+
+/* Color 2 slides */
+.sl-slide-color-2 {
+	background: #ade1f4;
+}
+
+/* Color 2 slides */
+.sl-slide-color-3 {
+	background: #ffeb41;
+}
