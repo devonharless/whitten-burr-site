@@ -45,9 +45,9 @@
 	};
 	
 	$.Slitslider.defaults 	= {
-		speed		: 1000,		// transitions speed
+		speed		: 800,		// transitions speed
 		autoplay	: false,	// slideshow on / off
-		interval	: 4000,  	// time between transitions
+		interval	: 3000,  	// time between transitions
 		optOpacity	: false,	// if true the slides's cuts will also animate its opacity
 		translateF	: 230,		// amount (%) to translate both cut1 and cut2 - adjust as necessary
 		maxAngle	: 25,		// maximum possible angle
@@ -145,10 +145,13 @@
 					var prevIndex = $('nav a.active').index();
 					var $prevLink = $('nav a.active');
 					
-					$(event.target).addClass('active');
-					$prevLink.removeClass('active');
+
+					if(!$(event.target).hasClass('active')) {
+					  $(event.target).addClass('active');
+					  $prevLink.removeClass('active');
 					
-					_self._navigate( 'out', prevIndex, nextIndex );		
+					  _self._navigate( 'out', prevIndex, nextIndex );
+					 }		
 				});	
 			}
 			
@@ -175,17 +178,13 @@
 			this.isAnimating = true;
 			
 			// the current slide
-			console.log(this)
 			var $currentSlide	= this.$slides.eq( this.current ), css;
 			
 			// set new current
-			( dir === 'in' ) ? 
-				( console.log('in') ) : 
-				( this.current = next );
+			this.current = next;
 				//( ( this.current > 0 ) ? --this.current : this.current = this.slidesCount - 1 );
 			
 			// next slide to be shown
-			console.log('next >> ', this.current)
 			var $nextSlide		= this.$slides.eq( this.current ).show(),
 				// the slide we want to cut and animate
 				$movingSlide	= ( dir === 'in' ) ? $currentSlide : $nextSlide,

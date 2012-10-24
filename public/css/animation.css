@@ -1,6 +1,6 @@
 /* Animations for elements */
 
-.sl-trans-elems .sl-deco {
+.sl-trans-elems .sl-deco, .sl-trans-elems ul {
 	-webkit-animation: roll 1s ease-out both, fadeIn 1s ease-out both;
 	-moz-animation: roll 1s ease-out both, fadeIn 1s ease-out both;
 	-o-animation: roll 1s ease-out both, fadeIn 1s ease-out both;
@@ -83,12 +83,12 @@
 	100% {opacity: 1;}
 }
 
-.sl-trans-back-elems .sl-deco {
-	-webkit-animation: scaleDown 1s ease-in-out both;
-	-moz-animation: scaleDown 1s ease-in-out both;
-	-o-animation: scaleDown 1s ease-in-out both;
-	-ms-animation: scaleDown 1s ease-in-out both;
-	animation: scaleDown 1s ease-in-out both;
+.sl-trans-back-elems .sl-deco, .sl-trans-back-elems ul {
+	-webkit-animation: scaleDown 0.8s ease-in-out both;
+	-moz-animation: scaleDown 0.8s ease-in-out both;
+	-o-animation: scaleDown 0.8s ease-in-out both;
+	-ms-animation: scaleDown 0.8s ease-in-out both;
+	animation: scaleDown 0.8s ease-in-out both;
 }
 
 .sl-trans-back-elems h2 {

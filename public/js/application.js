@@ -1,166 +1,37 @@
 $(document).ready(function() {
 
   //Global vars
-  var _currentImage;
-  var _currentCircle;
-  var _currentElement;
-
-  var _lastImage;
+ 
 
   //Process Slide Controller
-  processSlide();
-  processPage();
-  slider();
+  offeringSlide();
 
-  function processSlide() {
-    $('.media-container li').live('click', showNextImage);
-    $('.place_indicator li').live('click', triggerNextImage);
+  function offeringSlide() {
+    console.log('this is happening')
+    $('#slide1 li a').live('click', showNextOffering);
   } 
 
-  function processPage() {
-    $('#first-process').live('click', showNextProcess);
-    $('#second-process').live('click', showPreviousProcess);
-  }
-
-  function showNextProcess(event) {
-    
+  function showNextOffering(event) {
     event.preventDefault();
     
-    _currentProcess = $('.first_showcase').parent();
-    _nextProcess    = $('.second_showcase').parent();
-    $(_currentProcess[0]).fadeOut('slow', function() {
-      // Animation complete.
-      $(_nextProcess[0]).fadeIn();
-      $(_nextProcess[0]).addClass('active');
-      $(_currentProcess[0]).removeClass('active');
-    });
-  }
-
-  function showPreviousProcess(event) {
+    var $newHeadline = $(event.target).text().toLowerCase();
+    var $identifier = '.' + $newHeadline;
+    var $shownCopy = $('#slide1 blockquote').find($identifier);
     
-    event.preventDefault();
-    _currentProcess = $('.second_showcase').parent();
-    _nextProcess    = $('.first_showcase').parent();
-    $(_currentProcess[0]).fadeOut('slow', function() {
-      // Animation complete.
-      $(_nextProcess[0]).fadeIn();
-      $(_nextProcess[0]).addClass('active');
-      $(_currentProcess[0]).removeClass('active');
-    });
-  }   
+    $('#slide1 h2').text($newHeadline);
+    $('#slide1 blockquote p').removeClass('active');
+    $($shownCopy[0]).addClass('active');
 
-  function triggerNextImage(event) {
-    event.preventDefault();
+    $('#slide1 li a').removeClass('active');
+    $(event.target).addClass('active');
 
-    _currentClass   = '.' + $(event.target).attr('class').split(' ')[0];
-    _currentElement = $(event.target);
+    $(event.target).parent().siblings().transition({ y: '0px' }, 300, 'snap');
+    $(event.target).parent().transition({ y: '-20px' }, 300, 'out');
 
-    $(_currentElement).parent().siblings().find('li').removeClass('active');
-    $(_currentElement).siblings().removeClass('active');
-    $(_currentElement).addClass('active');
-    $(_currentElement).parent().siblings().find(_currentClass).addClass('active');
+    //$('#slide1 blockquote').fadeOut();
 
-  }
-
-  function showNextImage(event) {
-    event.preventDefault();
-
-    _currentImage  = event.target;
-    _lastImage     = $(_currentImage).parent().children().eq(-1);
-   
-    if($(_currentImage).hasClass('active')) {
+    $('#slide1 blockquote').css({ y: '30px', opacity: '0' }).transition({ y: '0px', opacity: 1 });
+    $('#slide1 h2').css({ y: '30px', opacity: '0' }).transition({ y: '0px', opacity: 1 });
     
-      if(_currentImage != _lastImage[0]) {
-        
-        _currentElement = $(event.target).next();
-        _currentClass   = '.' + $(event.target).next().attr('class').split(' ')[0];
-        
-        $(_currentElement).siblings().removeClass('active');
-        $(_currentElement).parent().siblings().find('li').removeClass('active');
-        $(_currentElement).addClass('active');
-        $(_currentElement).parent().siblings().find(_currentClass).addClass('active');
-      
-      }
-      else {
-        //It's the last image, go back to the beginning!
-        _currentElement = $(_currentImage).parent().children().eq(0)[0];
-
-        $(_currentElement).siblings().removeClass('active');
-        $(_currentElement).parent().siblings().find('li').removeClass('active');
-        $(_currentElement).addClass('active');
-        $(_currentElement).parent().siblings().find('.first').addClass('active');
-      }
-    }
-  }
-
-  function slider() {
-    navY = $('nav').offset().top;
-    navLinks = $('nav').find('a[href^="#"]');
-    sections = $('#main').find('section'); // reversed set of nav sections
-
-    $(window).scroll(function(){
-      scrollPos = $(this).scrollTop();
-
-      $(sections).each(function(){
-        elemHeight = ($(this).offset().top + $(this).height() - 450);
-
-        if(elemHeight >= scrollPos) {
-          element = '#nav-' + $(this).attr('id');
-          $('nav').find(element).addClass('active');
-          $('nav').find(element).siblings().removeClass('active');
-          return false;
-        }
-      });
-    });
-  }
-
-  //  Anchor Scrolling, a la the fancy CSS Tricks
-  //  http://css-tricks.com/snippets/jquery/smooth-scrolling/
-  function filterPath(string) {
-    return string
-    .replace(/^\//,'')
-    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
-    .replace(/\/$/,'');
-  }
-  var locationPath = filterPath(location.pathname);
-  var scrollElem = scrollableElement('html', 'body');
- 
-  $('a[href*=#]').each(function() {
-    var thisPath = filterPath(this.pathname) || locationPath;
-    if (locationPath == thisPath
-    && (location.hostname == this.hostname || !this.hostname)
-    && this.hash.replace(/#/,'') ) {
-      var $target = $(this.hash), target = this.hash;
-      if (target) {
-
-        var targetOffset = $target.offset().top;
-        $(this).click(function(event) {
-          event.preventDefault();
-
-          $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
-            location.hash = target;
-          });
-        });
-      }
-    }
-  });
- 
-  // use the first element that is "scrollable"
-  function scrollableElement(els) {
-    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
-      var el = arguments[i],
-          $scrollElement = $(el);
-      if ($scrollElement.scrollTop()> 0) {
-        return el;
-      } else {
-        $scrollElement.scrollTop(1);
-        var isScrollable = $scrollElement.scrollTop()> 0;
-        $scrollElement.scrollTop(0);
-        if (isScrollable) {
-          return el;
-        }
-      }
-    }
-    return [];
   }
 });
