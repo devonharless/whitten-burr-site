@@ -27,7 +27,7 @@ body {
 }
 
 a {
-	color: #555;
+	color: #323232;
 	text-decoration: none;
 }
 
@@ -38,30 +38,31 @@ a {
 	margin: 0;
 }
 
-/* Header Style */
-.codrops-top {
-	line-height: 24px;
-	font-size: 10px;
+/* Navigation */
+.container nav {
+	line-height: 40px;
+	font-size: 14px;
 	text-transform: uppercase;
 	z-index: 9999;
+	font-weight: 200;
 	position: relative;
-	font-family: Cambria, Georgia, serif;
+	text-align: center;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.codrops-top a {
-	padding: 0px 10px;
+nav a {
+	padding: 0px 10px 20px;
 	letter-spacing: 1px;
-	color: #aaa;
+	color: rgba(160, 160, 160, 1);
 	display: inline-block;
 }
 
-.codrops-top span.right {
-	float: right;
+nav a:hover {
+	border-top: 3px solid #ccc;
 }
-
-.codrops-top span.right a {
-	float: left;
-	display: block;
+nav a.active {
+	color: rgba(180, 180, 180, 1);
+	border-top: 3px solid #458faf;
 }
 
 .ie-note {
@@ -201,33 +202,15 @@ a {
 /* Content elements */
 
 .sl-deco {
-	width: 260px;
-	height: 260px;
-	border: 2px dashed #ddd;
-	border: 2px dashed rgba(150,150,150,0.4);
-	border-radius: 50%;
+	width: 254px;
+	height: 254px;
 	position: absolute;
 	bottom: 50%;
 	left: 50%;
+	text-indent: -9999px;
+	display: block;
+	background: transparent url(../images/logo.png) 0px 0px no-repeat;
 	margin-left: -130px;
-}
-
-[data-icon]:after {
-    content: attr(data-icon);
-    font-family: 'AnimalsNormal';
-    color: #000;
-	text-shadow: 0 0 1px #000;
-	position: absolute;
-	width: 220px;
-	height: 220px;
-	line-height: 220px;
-	text-align: center;
-	font-size: 100px;
-	top: 50%;
-	left: 50%;
-	margin: -110px 0 0 -110px;
-	box-shadow: inset 0 0 0 10px #f7f7f7;
-	border-radius: 50%;
 }
 
 .sl-slide h2 {
@@ -238,14 +221,14 @@ a {
 	position: absolute;
 	font-size: 34px;
 	font-weight: 300;
-	letter-spacing: 13px;
+	letter-spacing: 5px;
 	text-transform: uppercase;
 	width: 80%;
 	left: 10%;
 	text-align: center;
 	line-height: 50px;
 	bottom: 50%;
-	margin: 0 0 -120px 0;
+	margin: 0 0 -130px 0;
 }
 
 .sl-slide blockquote {

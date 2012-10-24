@@ -113,15 +113,6 @@
 			this._setSize();
 			// show first slide
 			this.$slides.eq( this.current ).show();
-			// add navigation
-			if( this.slidesCount > 1 ) {
-				
-				this.$slider.append(
-					'<nav><span class="sl-prev">Previous</span><span class="sl-next">Next</span></nav>'
-				);
-				
-			}
-			
 		},
 		_setSize			: function() {
 		
@@ -140,8 +131,8 @@
 			
 			if( this.slidesCount > 1 ) {
 			
-				// navigate "in" or "out"
-				this.$slider.find( 'nav > span.sl-prev' ).on( 'click.slitslider', function( event ) {
+				// navigate
+				$( 'nav a' ).on( 'click', function( event ) {
 					
 					if( _self.options.autoplay ) {
 					
@@ -149,20 +140,16 @@
 						_self.options.autoplay	= false;
 					
 					}
-					_self._navigate( 'out' );
-				
-				} ).end().find( 'nav > span.sl-next' ).on( 'click.slitslider', function( event ) {
+
+					var nextIndex = $(event.target).index();
+					var prevIndex = $('nav a.active').index();
+					var $prevLink = $('nav a.active');
 					
-					if( _self.options.autoplay ) {
+					$(event.target).addClass('active');
+					$prevLink.removeClass('active');
 					
-						clearTimeout( _self.slideshow );
-						_self.options.autoplay	= false;
-					
-					}
-					_self._navigate( 'in' );
-				
-				} );
-			
+					_self._navigate( 'out', prevIndex, nextIndex );		
+				});	
 			}
 			
 			$( window ).on( 'smartresize.slitslider', function( event ) {
@@ -174,7 +161,7 @@
 			} );
 		
 		},
-		_navigate			: function( dir ) {
+		_navigate			: function( dir, prev, next ) {
 			
 			// return if currently navigating / animating
 			if( this.isAnimating ) {
@@ -186,14 +173,19 @@
 			var _self = this;
 			// while isAnimating is true we can't navigate..
 			this.isAnimating = true;
+			
 			// the current slide
+			console.log(this)
 			var $currentSlide	= this.$slides.eq( this.current ), css;
+			
 			// set new current
 			( dir === 'in' ) ? 
-				( ( this.current < this.slidesCount - 1 ) ? ++this.current : this.current = 0 ) : 
-				( ( this.current > 0 ) ? --this.current : this.current = this.slidesCount - 1 );
+				( console.log('in') ) : 
+				( this.current = next );
+				//( ( this.current > 0 ) ? --this.current : this.current = this.slidesCount - 1 );
 			
-				// next slide to be shown
+			// next slide to be shown
+			console.log('next >> ', this.current)
 			var $nextSlide		= this.$slides.eq( this.current ).show(),
 				// the slide we want to cut and animate
 				$movingSlide	= ( dir === 'in' ) ? $currentSlide : $nextSlide,
