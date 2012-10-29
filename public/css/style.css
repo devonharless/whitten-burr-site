@@ -15,7 +15,7 @@
 }
 
 body {
-	font-family: Georgia, serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	background: #ddd;
 	font-weight: 100;
 	font-size: 15px;
@@ -28,6 +28,7 @@ body {
 
 a {
 	color: #5db9e1;
+	letter-spacing: 1px;
 	border-bottom: 1px dotted #437c95;
 	text-decoration: none;
 }
@@ -48,27 +49,26 @@ address {
 	font-size: 14px;
 	text-transform: uppercase;
 	z-index: 9999;
-	font-weight: 200;
+	font-weight: 300;
 	position: relative;
 	text-align: center;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 nav a {
 	padding: 0px 10px 20px;
-	color: rgba(170, 170, 170, 1);
-	letter-spacing: 1px;
+	color: rgba(180, 180, 180, 1);
 	display: inline-block;
 	border-bottom: none;
+	font-weight: 400;
 }
 
 nav a:hover {
-	border-top: 4px solid #ccc;
+	border-top: 5px solid #ccc;
 	border-bottom: none;
 }
 nav a.active {
-	color: rgba(200, 200, 200, 1);
-	border-top: 4px solid #458faf;
+	color: rgba(180, 180, 180, 1);
+	border-top: 5px solid #458faf;
 }
 
 .ie-note {
@@ -237,7 +237,7 @@ nav a.active {
 	margin: 0 0 -130px 0;
 }
 
-#slide1 ul {
+#slide1 ul, #slide3 ul {
 	position: absolute;
 	bottom: 50%;
 	width: 100%;
@@ -246,7 +246,7 @@ nav a.active {
 	padding: 0;
 }
 
-#slide1 ul li {
+#slide1 ul li, #slide3 ul li {
 	width: 250px;
 	height: 250px;
 	border: 1px solid #2a2a2a;
@@ -255,7 +255,7 @@ nav a.active {
 	padding: 0;
 }
 
-#slide1 ul li a {
+#slide1 ul li a, #slide3 ul li a {
 	width: 96%;
 	height: 96%;
 	margin: 2% auto;
@@ -268,12 +268,44 @@ nav a.active {
 #slide1 ul li:hover {
 	border: 1px solid rgba(150, 150, 150, .2);
 }
-#slide1 ul li a:hover {
+
+#slide1 ul li a:hover, #slide3 ul li a:hover {
 	border: 1px solid #2a2a2a;
 }
 
 #slide1 ul li a.active {
 	border: 1px solid #ccc;
+}
+
+#slide3 ul li {
+	width: 180px;
+	height: 120px;
+	margin: 0 5px 10px;
+	border: none;
+}
+
+#slide3 ul li a {
+	border-color: #4f1d28;
+}
+
+#slide3 #chirpify {
+	background: transparent url(../images/client/chirpify.png) center center no-repeat;
+}
+
+#slide3 #ppp {
+	background: transparent url(../images/client/ppp.png) center center no-repeat;
+}
+
+#slide3 #itchyrich {
+	background: transparent url(../images/client/itchyrich.png) center center no-repeat;
+}
+
+#slide3 #kgf {
+	background: transparent url(../images/client/kgf.png) center center no-repeat;
+}
+
+#slide3 #devnow {
+	background: transparent url(../images/client/devnow.png) center center no-repeat;
 }
 
 .sl-slide blockquote {
@@ -285,11 +317,13 @@ nav a.active {
 	height: 70px;
 	margin: 0 0 -200px 0;
 	padding: 0;
-	font-size: 20px;
+	font-size: 18px;
 	text-align: center;
 	letter-spacing: 0.1em;
 	line-height: 28px;
 	color: #8b8b8b;
+	font-weight: 200;
+	text-shadow: 0 1px 2px #ccc;
 }
 
 #slide1 p {
@@ -357,6 +391,7 @@ nav a.active {
 .sl-slide-color-1.sl-slide h2,
 .sl-slide-color-1.sl-slide blockquote {
 	color: #fff;
+	text-shadow: 0 1px 2px #000;
 }
 
 .sl-slide-color-1.sl-slide blockquote:before {
@@ -398,5 +433,23 @@ nav a.active {
 
 .sl-slide-color-3.sl-slide blockquote:before {
 	color: #ecd82c;
+}
+
+/* footer */
+
+.container footer {
+	position: absolute;
+	bottom: 2%;
+	width: 100%;
+	z-index: 1;
+	text-align: center;
+}
+
+.container footer a {
+	font-size: 11px;
+	font-weight: 200;
+	margin-right: 10px;
+	color: rgba(170, 170, 170, 1);
+	text-transform: uppercase;
 }
 
