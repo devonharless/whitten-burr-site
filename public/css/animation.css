@@ -83,7 +83,7 @@
 	100% {opacity: 1;}
 }
 
-.sl-trans-back-elems .sl-deco, .sl-trans-back-elems ul {
+.sl-trans-back-elems .sl-deco, .sl-trans-back-elems ul, .sl-trans-back-elems #media {
 	-webkit-animation: scaleDown 0.8s ease-in-out both;
 	-moz-animation: scaleDown 0.8s ease-in-out both;
 	-o-animation: scaleDown 0.8s ease-in-out both;
@@ -92,19 +92,19 @@
 }
 
 .sl-trans-back-elems h2 {
-	-webkit-animation: fadeOut 1s ease-in-out both;
-	-moz-animation: fadeOut 1s ease-in-out both;
-	-o-animation: fadeOut 1s ease-in-out both;
-	-ms-animation: fadeOut 1s ease-in-out both;
-	animation: fadeOut 1s ease-in-out both;
+	-webkit-animation: fadeOut 0.7s ease-in-out both;
+	-moz-animation: fadeOut 0.7s ease-in-out both;
+	-o-animation: fadeOut 0.7s ease-in-out both;
+	-ms-animation: fadeOut 0.7s ease-in-out both;
+	animation: fadeOut 0.7s ease-in-out both;
 }
 
 .sl-trans-back-elems blockquote {
-	-webkit-animation: fadeOut 1s linear both;
-	-moz-animation: fadeOut 1s linear both;
-	-o-animation: fadeOut 1s linear both;
-	-ms-animation: fadeOut 1s linear both;
-	animation: fadeOut 1s linear both;
+	-webkit-animation: fadeOut 0.7s linear both;
+	-moz-animation: fadeOut 0.7s linear both;
+	-o-animation: fadeOut 0.7s linear both;
+	-ms-animation: fadeOut 0.7s linear both;
+	animation: fadeOut 0.7s linear both;
 }
 
 @-webkit-keyframes scaleDown {

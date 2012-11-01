@@ -251,8 +251,21 @@ nav a.active {
 	height: 250px;
 	border: 1px solid #2a2a2a;
 	display: inline-block;
-	margin: 0 10px 0;
+	margin: 0 5px 0;
 	padding: 0;
+	border-radius: 20em;
+}
+
+#media {
+	position: relative;
+	top: 15%;
+	width: 100px;
+	max-width: 1000px;
+  height: 100px;
+  margin: 0 auto;
+  border: 1px solid #ffffff;
+  border-radius: 20em;
+  opacity: 0;
 }
 
 #slide1 ul li a, #slide3 ul li a {
@@ -263,13 +276,14 @@ nav a.active {
 	text-indent: -9999px;
 	border: 1px solid #3e3e3e;
   color: #fff;
+  border-radius: 20em;
 }
 
 #slide1 ul li:hover {
 	border: 1px solid rgba(150, 150, 150, .2);
 }
 
-#slide1 ul li a:hover, #slide3 ul li a:hover {
+#slide1 ul li a:hover {
 	border: 1px solid #2a2a2a;
 }
 
@@ -277,18 +291,27 @@ nav a.active {
 	border: 1px solid #ccc;
 }
 
+#slide1 #media {
+	background: url(../images/client/planning_bg.jpg) 0 0 repeat;
+}
+
 #slide3 ul li {
 	width: 180px;
 	height: 120px;
 	margin: 0 5px 10px;
 	border: none;
+	border-radius: 0px;
+	border-bottom: 1px solid #4a1923;
 }
 
 #slide3 ul li a {
 	border-color: #4f1d28;
+	border: none;
+	border-radius: 0px;
+	border-bottom: 1px solid #5b2632;
 }
 
-#slide3 #chirpify {
+#slide3 #chirpify a {
 	background: transparent url(../images/client/chirpify.png) center center no-repeat;
 }
 
