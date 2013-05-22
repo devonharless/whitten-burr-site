@@ -47,6 +47,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  daemons
   em-websocket
   guard
   guard-less
