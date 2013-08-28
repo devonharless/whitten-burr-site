@@ -21,6 +21,7 @@ LESS Framework
 html, body {
   margin: 0;
   padding: 0;
+  //background-color: red;
 }
 
 body {
@@ -42,10 +43,7 @@ a {
   text-decoration: none;
   color: lighten(@linkColor, 12%);
 
-  &:visited {
-    color: @linkColor;
-  }
-
+  &:visited { color: @linkColor; }
   &:hover {
     color: @linkColorHover;
   }
@@ -201,20 +199,18 @@ nav {
     border: 1px solid lighten(#222, 6%);
     background: #222;
     text-align: center;
+    
 
     li {
       .content_container(43%, auto, 10px, 0, 15px, 20px);
       .border_radius(7px);
-
       min-height: 150px;
       line-height: 1.8em;
       -webkit-font-smoothing: antialiased;
       display: inline-block;
       vertical-align: top;
 
-      &:first-child {
-        margin-right: 1%;
-      }
+      &:first-child { margin-right: 1%; }
       
       h3 {
         .set_font(1.7em, 400);
@@ -244,7 +240,7 @@ nav {
 
 }
 
-nav li, #process .showcase, #work .showcase {
+nav li, #process .showcase, #services .showcase {
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -252,7 +248,7 @@ nav li, #process .showcase, #work .showcase {
   user-select: none;
 }
 
-#process, #work, #clients {
+#process, #services, #clients {
   background: @cream;
 
   h3 {
@@ -274,17 +270,14 @@ nav li, #process .showcase, #work .showcase {
   }
 
   .detail-slide {
-    .content_container(100%, auto, 6em, 0, 0, 0);
+    .content_container ( 100%, auto, 6em, 0, 0, 0 );
     display: none;
-    &.active {
-      display: block;
-    }
+    &.active { display: block; }
   }
 
   aside {
     .content_container(31%, auto, 0, 0, 0, 0);
     .set_float(none, left);
-
     p span { font-weight: bold; }
   }
 
@@ -301,35 +294,29 @@ nav li, #process .showcase, #work .showcase {
       .image-replacement(100%, auto);
       .content_container(96%, 100%, 0, auto, 0, 0);
       .set_background_size(auto, 100%);
-
+            
       margin-bottom: 0;
       overflow: hidden;
       cursor: pointer;
       border: 1px solid lighten(@blue, 30%);
       display: none;
 
-      &.active {
-        display: block;
-      }
+      &.active { display: block; }
     }
 
     .place_indicator {
       .content_container(52px, auto, 1%, auto, 0, 0);
+      
       li {
         margin-right: 2px;
         .image-replacement(10px, 10px);
         .border_radius(10px);
         background: #c3c4be;
         border: 1px solid lighten(@grayDark, 15%);
-        cursor: pointer;
-        display: inline-block;
+        cursor: pointer;        display: inline-block;
 
-        &.active {
-          background: lighten(@darkRed, 25%);
-        }
-        &:hover {
-          background: lighten(@darkRed, 25%);
-        }
+        &.active { background: lighten(@darkRed, 25%); }
+        &:hover  { background: lighten(@darkRed, 25%); }
       }
     }
   }
@@ -341,36 +328,40 @@ nav li, #process .showcase, #work .showcase {
 }
 
 #main .first_showcase .media-container li {
-  &.first {
-    background: darken(@cream, 10%) url('../images/user_persona1.jpg') center 0 no-repeat;
-  }
-
-  &.second {
-    background: @cream url('../images/userflow1.jpg') center 0 no-repeat;
-  }
-
-  &.third {
-    background: @black url('../images/sketches.jpg') center 0 no-repeat;
-  }
+  &.first { background: darken(@cream, 10%) url('../images/user_persona1.jpg') center 0 no-repeat; }
+  &.second { background: @cream url('../images/userflow1.jpg') center 0 no-repeat; }
+  &.third { background: @black url('../images/sketches.jpg') center 0 no-repeat; }
 }
 
 #main .second_showcase .media-container li {
-  &.first {
-    background: @black url('../images/wireframe.jpg') center 0 no-repeat;
-  }
-
-  &.second {
-    background: @white url('../images/design.jpg') center 0 no-repeat;
-  }
-
-  &.third {
-    background: @grayDark url('../images/code.jpg') center 0 no-repeat;
-  }
+  &.first { background: @black url('../images/wireframe.jpg') center 0 no-repeat; }
+  &.second { background: @white url('../images/design.jpg') center 0 no-repeat; }
+  &.third { background: @grayDark url('../images/code.jpg') center 0 no-repeat; }
 }
 
 
-#main #work{
+#main #services{
     padding-top: 150px;
+    
+      ul{
+        //background-color: orange;
+        text-align: center;
+        
+        li{
+          //background-color: @grayDark;
+          width: 23%;
+          display: inline-block;
+          margin: 0 2px;
+          text-align: left;
+          vertical-align: top;
+          text-align: center;
+          padding: 5px; 
+          border-left: 1px solid lighten(@grayDark, 55%);
+          
+          &:nth-child(1) { border-left: none;}
+        }
+      }
+  
 }
 
 

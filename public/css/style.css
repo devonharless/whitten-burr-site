@@ -277,7 +277,7 @@ nav ul #nav-top a:hover {
 }
 nav li,
 #process .showcase,
-#work .showcase {
+#services .showcase {
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -285,12 +285,12 @@ nav li,
   user-select: none;
 }
 #process,
-#work,
+#services,
 #clients {
   background: #f4f6ee;
 }
 #process h3,
-#work h3,
+#services h3,
 #clients h3 {
   font-size: 1.7em;
   font-weight: 500;
@@ -299,7 +299,7 @@ nav li,
   color: #434448;
 }
 #process h4,
-#work h4,
+#services h4,
 #clients h4 {
   font-size: 1.25em;
   font-weight: 300;
@@ -309,7 +309,7 @@ nav li,
   font-style: italic;
 }
 #process p,
-#work p,
+#services p,
 #clients p {
   font-size: 1.1em;
   font-weight: 200;
@@ -317,7 +317,7 @@ nav li,
   line-height: 1.6em;
 }
 #process .detail-slide,
-#work .detail-slide,
+#services .detail-slide,
 #clients .detail-slide {
   width: 100%;
   height: auto;
@@ -326,12 +326,12 @@ nav li,
   display: none;
 }
 #process .detail-slide.active,
-#work .detail-slide.active,
+#services .detail-slide.active,
 #clients .detail-slide.active {
   display: block;
 }
 #process aside,
-#work aside,
+#services aside,
 #clients aside {
   width: 31%;
   height: auto;
@@ -341,12 +341,12 @@ nav li,
   float: left;
 }
 #process aside p span,
-#work aside p span,
+#services aside p span,
 #clients aside p span {
   font-weight: bold;
 }
 #process .showcase,
-#work .showcase,
+#services .showcase,
 #clients .showcase {
   width: 60%;
   height: auto;
@@ -356,7 +356,7 @@ nav li,
   float: right;
 }
 #process .showcase .media-container,
-#work .showcase .media-container,
+#services .showcase .media-container,
 #clients .showcase .media-container {
   width: 100%;
   height: 380px;
@@ -365,7 +365,7 @@ nav li,
   border: 1px solid #e0e4cc;
 }
 #process .showcase li,
-#work .showcase li,
+#services .showcase li,
 #clients .showcase li {
   width: 100%;
   height: auto;
@@ -389,12 +389,12 @@ nav li,
   display: none;
 }
 #process .showcase li.active,
-#work .showcase li.active,
+#services .showcase li.active,
 #clients .showcase li.active {
   display: block;
 }
 #process .showcase .place_indicator,
-#work .showcase .place_indicator,
+#services .showcase .place_indicator,
 #clients .showcase .place_indicator {
   width: 52px;
   height: auto;
@@ -402,7 +402,7 @@ nav li,
   padding: 0 0;
 }
 #process .showcase .place_indicator li,
-#work .showcase .place_indicator li,
+#services .showcase .place_indicator li,
 #clients .showcase .place_indicator li {
   margin-right: 2px;
   width: 10px;
@@ -421,20 +421,20 @@ nav li,
   display: inline-block;
 }
 #process .showcase .place_indicator li.active,
-#work .showcase .place_indicator li.active,
+#services .showcase .place_indicator li.active,
 #clients .showcase .place_indicator li.active {
   background: #9c626e;
 }
 #process .showcase .place_indicator li:hover,
-#work .showcase .place_indicator li:hover,
+#services .showcase .place_indicator li:hover,
 #clients .showcase .place_indicator li:hover {
   background: #9c626e;
 }
 #process .process-nav,
-#work .process-nav,
+#services .process-nav,
 #clients .process-nav,
 #process .work-nav,
-#work .work-nav,
+#services .work-nav,
 #clients .work-nav {
   font-size: 1.1em;
   font-weight: 300;
@@ -459,8 +459,24 @@ nav li,
 #main .second_showcase .media-container li.third {
   background: #434448 url('../images/code.jpg') center 0 no-repeat;
 }
-#main #work {
+#main #services {
   padding-top: 150px;
+}
+#main #services ul {
+  text-align: center;
+}
+#main #services ul li {
+  width: 23%;
+  display: inline-block;
+  margin: 0 2px;
+  text-align: left;
+  vertical-align: top;
+  text-align: center;
+  padding: 5px;
+  border-left: 1px solid #d0d1d3;
+}
+#main #services ul li:nth-child(1) {
+  border-left: none;
 }
 #contact {
   background: #2f3033 url('../images/pattern2.jpg') repeat;
@@ -633,142 +649,4 @@ IE8
 }
 #main #clients article:nth-child(6) {
   margin-right: 0;
-}
-#main #disney .media-container li.first {
-  background: #e0e4cc url('../images/client/disney_1.jpg') center 0 no-repeat;
-}
-#main #disney .media-container li.second {
-  background: #f4f6ee url('../images/client/disney_2.jpg') center 0 no-repeat;
-}
-#main #disney .media-container li.third {
-  background: #000000 url('../images/client/disney_3.jpg') center 0 no-repeat;
-}
-#main #puppet .media-container li.first {
-  background: #e0e4cc url('../images/client/puppet_1.jpg') center 0 no-repeat;
-}
-#main #puppet .media-container li.second {
-  background: #e0e4cc url('../images/client/puppet_2.jpg') center 0 no-repeat;
-}
-#main #irep .media-container li.first {
-  background: #e0e4cc url('../images/client/irep.jpg') center 0 no-repeat;
-}
-#main #asus .media-container li.first {
-  background: #e0e4cc url('../images/client/asus.jpg') center 0 no-repeat;
-}
-#main #penn .media-container li.first {
-  background: #e0e4cc url('../images/client/penn.jpg') center 0 no-repeat;
-}
-#main #epsilon .media-container li.first {
-  background: #e0e4cc url('../images/client/epsilon.jpg') center 0 no-repeat;
-}
-#main #ae .media-container li.first {
-  background: #e0e4cc url('../images/client/ae.jpg') center 0 no-repeat;
-}
-#main #adaptu .media-container li.first {
-  background: #e0e4cc url('../images/client/adaptu_1.jpg') center 0 no-repeat;
-}
-#main #adaptu .media-container li.second {
-  background: #e0e4cc url('../images/client/adaptu_2.jpg') center 0 no-repeat;
-}
-#main #adaptu .media-container li.third {
-  background: #e0e4cc url('../images/client/adaptu_3.jpg') center 0 no-repeat;
-}
-#main #belmont .media-container li.first {
-  background: #e0e4cc url('../images/client/belmont.jpg') center 0 no-repeat;
-}
-#main #emily .media-container li.first {
-  background: #e0e4cc url('../images/client/emily_1.jpg') center 0 no-repeat;
-}
-#main #emily .media-container li.second {
-  background: #e0e4cc url('../images/client/emily_2.jpg') center 0 no-repeat;
-}
-#main #emily .media-container li.third {
-  background: #e0e4cc url('../images/client/emily_3.jpg') center 0 no-repeat;
-}
-#main #malaria .media-container li.first {
-  background: #e0e4cc url('../images/client/gates_1.jpg') center 0 no-repeat;
-}
-#main #malaria .media-container li.second {
-  background: #e0e4cc url('../images/client/gates_2.jpg') center 0 no-repeat;
-}
-#main #ge_jobs .media-container li.first {
-  background: #e0e4cc url('../images/client/ge_1.jpg') center 0 no-repeat;
-}
-#main #ge_jobs .media-container li.second {
-  background: #e0e4cc url('../images/client/ge_2.jpg') center 0 no-repeat;
-}
-#main #ge_jobs .media-container li.third {
-  background: #e0e4cc url('../images/client/ge_3.jpg') center 0 no-repeat;
-}
-#main #hewlett .media-container li.first {
-  background: #e0e4cc url('../images/client/hf_1.jpg') center 0 no-repeat;
-}
-#main #hewlett .media-container li.second {
-  background: #e0e4cc url('../images/client/hf_2.jpg') center 0 no-repeat;
-}
-#main #hewlett .media-container li.third {
-  background: #e0e4cc url('../images/client/hf_3.jpg') center 0 no-repeat;
-}
-#main #smot .media-container li.first {
-  background: #e0e4cc url('../images/client/pg_1.jpg') center 0 no-repeat;
-}
-#main #smot .media-container li.second {
-  background: #e0e4cc url('../images/client/pg_2.jpg') center 0 no-repeat;
-}
-#main #smot .media-container li.third {
-  background: #e0e4cc url('../images/client/pg_3.jpg') center 0 no-repeat;
-}
-#main #virginia_garcia .media-container li.first {
-  background: #e0e4cc url('../images/client/garcia_1.jpg') center 0 no-repeat;
-}
-#main #virginia_garcia .media-container li.second {
-  background: #e0e4cc url('../images/client/garcia_2.jpg') center 0 no-repeat;
-}
-#main #sean .media-container li.first {
-  background: #e0e4cc url('../images/client/sean.jpg') center 0 no-repeat;
-}
-#main #smot .media-container li.first {
-  background: #e0e4cc url('../images/client/pg_1.jpg') center 0 no-repeat;
-}
-#main #smot .media-container li.second {
-  background: #e0e4cc url('../images/client/pg_2.jpg') center 0 no-repeat;
-}
-#main #smot .media-container li.third {
-  background: #e0e4cc url('../images/client/pg_3.jpg') center 0 no-repeat;
-}
-#main #yahoo_mail .media-container li.first {
-  background: #e0e4cc url('../images/client/yahoo_1.jpg') center 0 no-repeat;
-}
-#main #yahoo_mail .media-container li.second {
-  background: #e0e4cc url('../images/client/yahoo_2.jpg') center 0 no-repeat;
-}
-#main #yahoo_core .media-container li.first {
-  background: #e0e4cc url('../images/client/core_1.jpg') center 0 no-repeat;
-}
-#main #yahoo_core .media-container li.second {
-  background: #e0e4cc url('../images/client/core_2.jpg') center 0 no-repeat;
-}
-#main #wwss .media-container li.first {
-  background: #e0e4cc url('../images/client/wwss_1.jpg') center 0 no-repeat;
-}
-#main #wwss .media-container li.second {
-  background: #e0e4cc url('../images/client/wwss_2.jpg') center 0 no-repeat;
-}
-#main #wwss .media-container li.third {
-  background: #e0e4cc url('../images/client/wwss_3.jpg') center 0 no-repeat;
-}
-#main #periscopic .media-container li.first {
-  background: #e0e4cc url('../images/client/periscopic_1.jpg') center 0 no-repeat;
-}
-#main #periscopic .media-container li.second {
-  background: #e0e4cc url('../images/client/periscopic_2.jpg') center 0 no-repeat;
-}
-#main #periscopic .media-container li.third {
-  background: #e0e4cc url('../images/client/periscopic_3.jpg') center 0 no-repeat;
-}
-#main #house_of_burr .media-container li.first {
-  background: #e0e4cc url('../images/client/burr_1.jpg') center 0 no-repeat;
-}
-#main #house_of_burr .media-container li.second {
-  background: #e0e4cc url('../images/client/burr_2.jpg') center 0 no-repeat;
 }
