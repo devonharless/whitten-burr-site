@@ -11,8 +11,10 @@ LESS Framework
 2. Layout & Background / #container
 3. Inner Content / #main
 4. Footer / footer
-
 -------------------------------------------------------------------*/
+
+
+
 
 /*------------------------------------------------------------------
 [1. html/body ]
@@ -66,10 +68,16 @@ h1, h2, h3, h4, h5 {
   color: @cream;
 }
 
+
+
+
 /*------------------------------------------------------------------
 [2. Layout structure & Background ]
 */
 
+#container {
+  .content_container(100%, 100%, 0, auto, 0, 0);
+}
 
 nav {
   .content_container(100%, auto, 0, 0, 0, 0);
@@ -129,9 +137,8 @@ nav {
   }
 }
 
-#container {
-  .content_container(100%, 100%, 0, auto, 0, 0);
-}
+
+
 
 /*------------------------------------------------------------------
 [3. Inner Content ]
@@ -162,6 +169,11 @@ nav {
     padding: 4em;
   }
 }
+
+
+/* -------------
+ABOUT 
+----------------*/
 
 #about {
   color: @offWhite;
@@ -225,22 +237,10 @@ nav {
     }
   }
 
-  #client_work {
-    .set_font(1.1em, 200);
-    .content_container(55%, auto, 0, auto, 0, 0);
-    .center-block();
-    position: absolute;
-    top: 340px;
-    padding: 2% 20%;
-    border: 1px solid dotted(#222, 30%);
-    background: #222;
-    line-height: 1.7em;
-    letter-spacing: 0.2em;
-  }
 
 }
 
-nav li, #process .showcase, #services .showcase {
+nav li, .showcase, #services .showcase {
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -248,7 +248,8 @@ nav li, #process .showcase, #services .showcase {
   user-select: none;
 }
 
-#process, #services, #clients {
+
+#services, #clients {
   background: @cream;
 
   h3 {
@@ -269,86 +270,18 @@ nav li, #process .showcase, #services .showcase {
     line-height: 1.6em;
   }
 
-  .detail-slide {
-    .content_container ( 100%, auto, 6em, 0, 0, 0 );
-    display: none;
-    &.active { display: block; }
-  }
-
-  aside {
-    .content_container(31%, auto, 0, 0, 0, 0);
-    .set_float(none, left);
-    p span { font-weight: bold; }
-  }
-
-  .showcase {
-    .content_container(60%, auto, 0, 0, 0, 0);
-    .set_float(none, right);
-
-    .media-container {
-      .content_container(100%, 380px, 0, 0, 2%, 0);  
-      border: 1px solid darken(@cream, 10%);
-    }
-
-    li {
-      .image-replacement(100%, auto);
-      .content_container(96%, 100%, 0, auto, 0, 0);
-      .set_background_size(auto, 100%);
-            
-      margin-bottom: 0;
-      overflow: hidden;
-      cursor: pointer;
-      border: 1px solid lighten(@blue, 30%);
-      display: none;
-
-      &.active { display: block; }
-    }
-
-    .place_indicator {
-      .content_container(52px, auto, 1%, auto, 0, 0);
-      
-      li {
-        margin-right: 2px;
-        .image-replacement(10px, 10px);
-        .border_radius(10px);
-        background: #c3c4be;
-        border: 1px solid lighten(@grayDark, 15%);
-        cursor: pointer;        display: inline-block;
-
-        &.active { background: lighten(@darkRed, 25%); }
-        &:hover  { background: lighten(@darkRed, 25%); }
-      }
-    }
-  }
-
-  .process-nav, .work-nav {
-    .set_font(1.1em, 300);
-    display: inline;
-  }
 }
 
-#main .first_showcase .media-container li {
-  &.first { background: darken(@cream, 10%) url('../images/user_persona1.jpg') center 0 no-repeat; }
-  &.second { background: @cream url('../images/userflow1.jpg') center 0 no-repeat; }
-  &.third { background: @black url('../images/sketches.jpg') center 0 no-repeat; }
-}
 
-#main .second_showcase .media-container li {
-  &.first { background: @black url('../images/wireframe.jpg') center 0 no-repeat; }
-  &.second { background: @white url('../images/design.jpg') center 0 no-repeat; }
-  &.third { background: @grayDark url('../images/code.jpg') center 0 no-repeat; }
-}
 
 
 #main #services{
     padding-top: 150px;
     
       ul{
-        //background-color: orange;
         text-align: center;
         
         li{
-          //background-color: @grayDark;
           width: 23%;
           display: inline-block;
           margin: 0 2px;
@@ -438,8 +371,6 @@ nav li, #process .showcase, #services .showcase {
     
             &#googlePlus{ background-position: -146px -3px; }
             &#googlePlus:hover{ background-position: -146px -55px; }
-    
-            &#dribbble{ display: none; }
     
           }
         } 
